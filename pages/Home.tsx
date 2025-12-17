@@ -10,9 +10,9 @@ import { SERVICES, FAQS, PHONE_NUMBER, NEIGHBORHOODS } from '../constants';
 const Home: React.FC = () => {
   return (
     <div className="space-y-0">
-      <SEO 
-        title="Seattle's Trusted Concrete Contractors" 
-        description="Cloud Concrete of Seattle provides high-quality residential, commercial, and decorative concrete services including driveways, patios, foundations, and stamped concrete in all Seattle WA neighborhoods."
+      <SEO
+        title="Concrete Contractor Seattle WA | Driveways, Patios & Foundations"
+        description="Looking for a concrete contractor in Seattle? Cloud Concrete offers driveways, patios, foundations, stamped concrete & more. Licensed & insured. Free estimates. Call (206) 495-0997."
         schemaType="FAQPage"
         schemaData={{
           mainEntity: FAQS.map(faq => ({
@@ -29,19 +29,19 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative bg-brand-dark overflow-hidden pt-24 pb-24 md:pt-40 md:pb-40">
         <div className="absolute inset-0 opacity-15">
-          <img src="https://picsum.photos/id/122/1600/900" alt="Concrete background" className="w-full h-full object-cover" />
+          <img src="/images/concrete-40.jpeg" alt="Concrete background" className="w-full h-full object-cover" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2 text-white">
               <div className="inline-block bg-brand-primary/20 border border-brand-primary/30 text-brand-secondary px-5 py-2 rounded-full text-sm font-black uppercase tracking-[0.2em] mb-8">
-                Seattle's Elite Concrete Team
+                Licensed & Insured
               </div>
               <h1 className="text-5xl md:text-7xl font-black mb-8 leading-[1.1]">
-                High-Performance <br/><span className="text-brand-secondary italic">Seattle Concrete</span>
+                Seattle's Trusted <br/><span className="text-brand-secondary italic">Concrete Contractor</span>
               </h1>
               <p className="text-xl md:text-2xl text-slate-300 mb-10 max-w-xl leading-relaxed font-medium">
-                Premium concrete craftsmanship for Seattle's unique landscape. Luxury patios, structural foundations, and high-durability residential flatwork across all neighborhoods.
+                Driveways, patios, foundations, and stamped concrete built to last. Serving all Seattle neighborhoods with free estimates and quality workmanship.
               </p>
               <div className="flex flex-wrap gap-5">
                 <Link to="/contact" className="bg-brand-primary hover:brightness-110 text-white px-10 py-5 rounded-xl text-lg font-black shadow-2xl transition-all transform hover:-translate-y-1">
@@ -185,11 +185,11 @@ const Home: React.FC = () => {
       <section className="py-24 bg-brand-primary text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-brand-dark opacity-10 pointer-events-none"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-5xl md:text-7xl font-black mb-8 leading-tight">Build Your <br/><span className="text-brand-secondary italic">Seattle Legacy</span></h2>
-          <p className="text-lg text-white/80 font-medium max-w-xl mx-auto mb-10">Free topography audits and firm quotes within 24 hours. Premium Seattle craftsmanship.</p>
+          <h2 className="text-5xl md:text-7xl font-black mb-8 leading-tight">Ready to Pour?<br/><span className="text-brand-secondary italic">Let's Talk.</span></h2>
+          <p className="text-lg text-white/80 font-medium max-w-xl mx-auto mb-10">Get a free on-site estimate for your driveway, patio, or foundation project. No pressure, just honest pricing from Seattle's concrete pros.</p>
           <div className="flex flex-wrap justify-center gap-6">
             <Link to="/contact" className="bg-white text-brand-primary px-10 py-5 rounded-xl font-black text-sm uppercase tracking-widest shadow-2xl hover:scale-105 transition-all">
-              Request Free Estimate
+              Get My Free Quote
             </Link>
             <a href={`tel:${PHONE_NUMBER}`} className="bg-brand-dark text-white px-10 py-5 rounded-xl font-black text-sm uppercase tracking-widest shadow-2xl flex items-center gap-4 hover:scale-105 transition-all border border-white/10">
               <svg className="w-6 h-6 text-brand-secondary" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 005.455 5.455l.773-1.548a1 1 0 011.06-.539l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>

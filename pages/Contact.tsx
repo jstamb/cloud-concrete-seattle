@@ -1,13 +1,12 @@
 
 import React from 'react';
-import Layout from '../components/Layout';
 import LeadForm from '../components/LeadForm';
 import SEO from '../components/SEO';
 import { PHONE_NUMBER, BUSINESS_NAME } from '../constants';
 
 const Contact: React.FC = () => {
   return (
-    <Layout>
+    <div className="pb-32">
       <SEO 
         title="Contact Us | Request a Free Concrete Quote" 
         description="Get in touch with Cloud Concrete of Seattle for a free estimate on your next project. We serve all Seattle neighborhoods and surrounding areas."
@@ -15,7 +14,7 @@ const Contact: React.FC = () => {
       
       <div className="bg-brand-dark py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src="https://picsum.photos/id/101/1600/900" alt="Concrete project background" className="w-full h-full object-cover" />
+          <img src="/images/concrete-38.jpeg" alt="Concrete project background" className="w-full h-full object-cover" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-black mb-6">Let's Discuss <br/><span className="text-brand-secondary italic">Your Vision</span></h1>
@@ -89,7 +88,7 @@ const Contact: React.FC = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </section>
-    </Layout>
+    </div>
   );
 };
 

@@ -5,6 +5,14 @@ import LeadForm from '../components/LeadForm';
 import SEO from '../components/SEO';
 import { NEIGHBORHOODS, SERVICES, PHONE_NUMBER } from '../constants';
 
+// Get a concrete image based on location index
+const getLocationImage = (slug: string): string => {
+  const index = NEIGHBORHOODS.findIndex(n => n.slug === slug);
+  const imageNumbers = [12, 15, 18, 20, 22, 25, 28, 30, 32, 35, 38, 40, 42, 45, 48, 50, 52, 55, 58, 60, 62, 65, 68, 70, 72, 75, 78, 80, 82, 85, 88, 90, 92, 95, 97, 100, 101, 102, 103, 104, 105, 106, 107];
+  const imageNum = imageNumbers[index % imageNumbers.length];
+  return `/images/concrete-${imageNum}.jpeg`;
+};
+
 const LocationDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const location = NEIGHBORHOODS.find(n => n.slug === slug);
@@ -13,18 +21,18 @@ const LocationDetail: React.FC = () => {
 
   return (
     <div className="pb-32">
-      <SEO 
-        title={`Concrete Contractors in ${location.name}, Seattle | Cloud Concrete`} 
-        description={`Expert concrete services for ${location.name}, Seattle. Custom driveways, patios, and foundations in zip code ${location.zip}. Locally owned and operated.`}
+      <SEO
+        title={`Concrete Contractor in ${location.name}, Seattle | Driveways, Patios & More`}
+        description={`Looking for a concrete contractor in ${location.name}, Seattle? Cloud Concrete provides expert driveway, patio, and foundation services in ${location.zip}. Free estimates. Call (206) 495-0997.`}
       />
       <div className="bg-brand-dark py-20 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src={`https://picsum.photos/seed/${location.slug}/1600/900`} alt={`${location.name}, Seattle`} className="w-full h-full object-cover" />
+          <img src={getLocationImage(location.slug)} alt={`${location.name}, Seattle`} className="w-full h-full object-cover" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tight">Concrete in <br/><span className="text-brand-secondary italic">{location.name}, Seattle</span></h1>
+          <h1 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tight">Concrete Contractor in <br/><span className="text-brand-secondary italic">{location.name}, Seattle</span></h1>
           <p className="text-lg md:text-xl text-slate-300 mb-8 font-medium max-w-3xl mx-auto">
-            Expert concrete services tailored to the terrain of {location.name} ({location.zip}) for over 15 years.
+            Your local concrete contractor serving {location.name} ({location.zip}). Driveways, patios, foundations & more.
           </p>
           <div className="flex justify-center gap-4">
             <a href={`tel:${PHONE_NUMBER}`} className="bg-brand-primary text-white px-8 py-4 rounded-xl font-black text-xs shadow-2xl hover:brightness-110 transition-all uppercase tracking-[0.2em]">
@@ -37,7 +45,7 @@ const LocationDetail: React.FC = () => {
       <div className="container mx-auto px-4 mt-16">
         <div className="flex flex-col lg:flex-row gap-16">
           <div className="lg:w-2/3">
-            <h2 className="text-3xl font-black text-brand-dark mb-4 uppercase tracking-tight">Excellence in {location.name}</h2>
+            <h2 className="text-3xl font-black text-brand-dark mb-4 uppercase tracking-tight">Your Trusted Concrete Contractor in {location.name}</h2>
             <div className="w-20 h-1.5 bg-brand-primary mb-8"></div>
             
             <p className="text-base text-slate-600 mb-10 leading-relaxed font-medium">

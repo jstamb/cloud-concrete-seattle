@@ -13,9 +13,9 @@ const ServiceDetail: React.FC = () => {
 
   return (
     <div className="pb-32">
-      <SEO 
-        title={`${service.name} in Seattle, WA`} 
-        description={`Expert ${service.name.toLowerCase()} installation and repair in Seattle. Quality craftsmanship, competitive pricing, and 10-year structural warranty.`}
+      <SEO
+        title={`${service.name} Contractor Seattle WA | Installation & Repair`}
+        description={`Looking for a ${service.name.toLowerCase()} contractor in Seattle? Cloud Concrete offers professional installation & repair with free estimates. Licensed, bonded & insured. Call (206) 495-0997.`}
         schemaType="Service"
         schemaData={{
           "serviceType": service.name,
@@ -35,9 +35,9 @@ const ServiceDetail: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
             <div className="inline-block bg-brand-primary/20 border border-brand-primary/30 text-brand-secondary px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-[0.2em] mb-6">
-              Expert Concrete Services
+              Licensed Seattle Contractor
             </div>
-            <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">{service.name} <br/><span className="text-brand-secondary italic">in Seattle, WA</span></h1>
+            <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">{service.name} Contractor <br/><span className="text-brand-secondary italic">in Seattle, WA</span></h1>
             <p className="text-xl md:text-2xl text-slate-300 leading-relaxed mb-10 font-medium max-w-2xl">{service.shortDescription}</p>
             <div className="flex flex-wrap gap-5">
               <a href={`tel:${PHONE_NUMBER}`} className="bg-brand-primary hover:brightness-110 text-white px-10 py-5 rounded-xl font-black text-lg transition-all shadow-2xl flex items-center gap-3">
@@ -57,7 +57,7 @@ const ServiceDetail: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-20">
           <div className="lg:w-2/3">
             <div className="prose prose-slate prose-xl max-w-none">
-              <h2 className="text-4xl font-black text-brand-dark mb-8 tracking-tight">Premium {service.name} Implementation</h2>
+              <h2 className="text-4xl font-black text-brand-dark mb-8 tracking-tight">Seattle's Trusted {service.name} Contractor</h2>
               <div className="w-20 h-2 bg-brand-primary mb-10"></div>
               <p className="text-slate-600 font-medium leading-relaxed mb-10">{service.longDescription}</p>
               

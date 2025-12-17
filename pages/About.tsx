@@ -13,7 +13,7 @@ const About: React.FC = () => {
       
       <div className="bg-brand-dark py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src="https://picsum.photos/id/102/1600/900" alt="Concrete Crew" className="w-full h-full object-cover" />
+          <img src="/images/concrete-45.jpeg" alt="Concrete Crew" className="w-full h-full object-cover" />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tight">Our <span className="text-brand-secondary italic tracking-normal">Mission</span></h1>
@@ -34,7 +34,7 @@ const About: React.FC = () => {
           </div>
           <div className="lg:w-1/2">
             <div className="relative">
-              <img src="https://picsum.photos/id/122/800/800" alt="Concrete Finish" className="rounded-[3rem] shadow-2xl relative z-10 border-8 border-white" />
+              <img src="/images/concrete-52.jpeg" alt="Concrete Finish" className="rounded-[3rem] shadow-2xl relative z-10 border-8 border-white" />
               <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-brand-primary rounded-full z-0 opacity-20 blur-3xl"></div>
               <div className="absolute -top-10 -left-10 w-48 h-48 bg-brand-secondary rounded-full z-0 opacity-20 blur-3xl"></div>
             </div>

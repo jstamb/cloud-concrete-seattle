@@ -10,21 +10,21 @@ const LocationsHub: React.FC = () => {
 
   return (
     <div className="pb-32">
-      <SEO 
-        title="Seattle Concrete Service Areas | Neighborhood Guide" 
-        description="Cloud Concrete serves all Seattle, WA neighborhoods and surrounding Greater Seattle areas. Find your local district for expert concrete installation and repair."
+      <SEO
+        title="Concrete Contractor Near Me | Seattle Neighborhoods Served"
+        description="Find a concrete contractor near you in Seattle. We serve Ballard, Queen Anne, Capitol Hill, West Seattle & all neighborhoods. Licensed, bonded & insured. Call (206) 495-0997."
       />
-      
+
       <div className="bg-brand-dark py-24 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tight">Service <br/><span className="text-brand-secondary italic">Districts</span></h1>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto font-medium">Expert concrete craftsmanship delivered to every residential and commercial corner of the Greater Seattle Metro area.</p>
+          <h1 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tight">Concrete Contractor <br/><span className="text-brand-secondary italic">Near You</span></h1>
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto font-medium">Your local Seattle concrete contractor. Find your neighborhood below for service details and free estimates.</p>
         </div>
       </div>
 
       <div className="container mx-auto px-4 py-24">
         <div className="mb-24">
-          <h2 className="text-4xl font-black text-brand-dark mb-12 text-center tracking-tight uppercase">Seattle Neighborhoods</h2>
+          <h2 className="text-4xl font-black text-brand-dark mb-12 text-center tracking-tight uppercase">Concrete Contractor by Seattle Neighborhood</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {coreSeattle.map(n => (
               <Link 

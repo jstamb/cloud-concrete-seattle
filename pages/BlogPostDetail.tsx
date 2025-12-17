@@ -5,6 +5,20 @@ import LeadForm from '../components/LeadForm';
 import SEO from '../components/SEO';
 import { BLOG_POSTS, PHONE_NUMBER, BUSINESS_NAME } from '../constants';
 
+// Map blog posts to concrete images
+const BLOG_IMAGES: Record<string, string> = {
+  'concrete-driveway-cost-seattle': '/images/concrete-50.jpeg',
+  'stamped-concrete-vs-pavers': '/images/concrete-55.jpeg',
+  'concrete-solutions-seattle-rain': '/images/concrete-60.jpeg',
+  'seattle-concrete-permits': '/images/concrete-65.jpeg',
+  'seattle-soil-foundation-tips': '/images/concrete-70.jpeg',
+  'best-time-to-pour-seattle': '/images/concrete-75.jpeg',
+  'stamped-patterns-seattle': '/images/concrete-80.jpeg',
+  'eco-friendly-concrete-seattle': '/images/concrete-85.jpeg',
+  'prepare-property-concrete': '/images/concrete-90.jpeg',
+  'historic-concrete-restoration': '/images/concrete-95.jpeg',
+};
+
 const BlogPostDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = BLOG_POSTS.find(p => p.slug === slug);
@@ -32,7 +46,7 @@ const BlogPostDetail: React.FC = () => {
             }
           },
           "datePublished": "2024-01-01", // Should ideally be dynamic
-          "image": `https://picsum.photos/seed/${post.slug}/1200/600`
+          "image": `https://cloudconcreteseattle.com${BLOG_IMAGES[post.slug] || '/images/concrete-100.jpeg'}`
         }}
       />
       <div className="container mx-auto px-4 py-16">
@@ -54,10 +68,10 @@ const BlogPostDetail: React.FC = () => {
             </div>
           </div>
           
-          <img 
-            src={`https://picsum.photos/seed/${post.slug}/1200/600`} 
-            alt={post.title} 
-            className="w-full h-[400px] object-cover rounded-[3rem] mb-16 shadow-2xl" 
+          <img
+            src={BLOG_IMAGES[post.slug] || '/images/concrete-100.jpeg'}
+            alt={post.title}
+            className="w-full h-[400px] object-cover rounded-[3rem] mb-16 shadow-2xl"
           />
 
           <div className="flex flex-col lg:flex-row gap-16">

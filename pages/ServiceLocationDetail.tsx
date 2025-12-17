@@ -5,6 +5,15 @@ import LeadForm from '../components/LeadForm';
 import SEO from '../components/SEO';
 import { SERVICES, NEIGHBORHOODS, PHONE_NUMBER } from '../constants';
 
+// Get a concrete image based on service and location
+const getServiceLocationImage = (serviceSlug: string, locationSlug: string): string => {
+  const serviceIndex = SERVICES.findIndex(s => s.slug === serviceSlug);
+  const locationIndex = NEIGHBORHOODS.findIndex(n => n.slug === locationSlug);
+  const imageNumbers = [12, 15, 18, 20, 22, 25, 28, 30, 32, 35, 38, 40, 42, 45, 48, 50, 52, 55, 58, 60, 62, 65, 68, 70, 72, 75, 78, 80, 82, 85, 88, 90, 92, 95, 97, 100, 101, 102, 103, 104, 105, 106, 107];
+  const imageNum = imageNumbers[(serviceIndex + locationIndex) % imageNumbers.length];
+  return `/images/concrete-${imageNum}.jpeg`;
+};
+
 const ServiceLocationDetail: React.FC = () => {
   const { combinedSlug } = useParams<{ combinedSlug: string }>();
   
@@ -70,25 +79,25 @@ const ServiceLocationDetail: React.FC = () => {
 
   return (
     <div className="pb-32">
-      <SEO 
-        title={`${service.name} in ${location.name}, Seattle | Cloud Concrete`} 
-        description={`Expert ${service.name.toLowerCase()} installation and repair in ${location.name}, Seattle. Fully licensed and bonded local concrete contractors serving ${location.zip || 'the Greater Seattle area'}. Request your free quote today!`}
+      <SEO
+        title={`${service.name} Contractor in ${location.name}, Seattle | Free Quotes`}
+        description={`Need a ${service.name.toLowerCase()} contractor in ${location.name}, Seattle? Cloud Concrete offers expert installation & repair in ${location.zip || 'the Greater Seattle area'}. Licensed & insured. Call (206) 495-0997 for a free estimate.`}
       />
       
       <div className="bg-brand-dark py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-15">
-          <img src={`https://picsum.photos/seed/${service.slug}${location.slug}/1600/900`} alt={`${service.name} in ${location.name}`} className="w-full h-full object-cover" />
+          <img src={getServiceLocationImage(service.slug, location.slug)} alt={`${service.name} in ${location.name}`} className="w-full h-full object-cover" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
             <div className="inline-block bg-brand-primary/20 border border-brand-primary/30 text-brand-secondary px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-[0.2em] mb-6">
-              Authorized {location.name} Specialists
+              Licensed {location.name} Contractor
             </div>
             <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
-              {service.name} <br/><span className="text-brand-secondary italic">in {location.name}, Seattle</span>
+              {service.name} Contractor <br/><span className="text-brand-secondary italic">in {location.name}, Seattle</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 leading-relaxed mb-10 font-medium max-w-2xl">
-              Delivering high-performance {service.name.toLowerCase()} solutions designed for the unique terrain and climate of {location.name}, WA.
+              Professional {service.name.toLowerCase()} installation and repair in {location.name}. Free estimates, quality workmanship guaranteed.
             </p>
             <div className="flex flex-wrap gap-5">
               <a href={`tel:${PHONE_NUMBER}`} className="bg-brand-primary text-white px-10 py-5 rounded-xl font-black text-lg transition-all shadow-2xl flex items-center gap-3">
@@ -103,7 +112,7 @@ const ServiceLocationDetail: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-20">
           <div className="lg:w-2/3">
             <div className="prose prose-slate prose-xl max-w-none">
-              <h2 className="text-4xl font-black text-brand-dark mb-8 tracking-tight">The Preferred Choice for {service.name} in {location.name}</h2>
+              <h2 className="text-4xl font-black text-brand-dark mb-8 tracking-tight">{location.name}'s Top-Rated {service.name} Contractor</h2>
               <div className="w-20 h-2 bg-brand-primary mb-10"></div>
               
               <p className="text-slate-600 font-medium leading-relaxed mb-10">

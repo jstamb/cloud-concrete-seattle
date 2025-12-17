@@ -197,9 +197,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">
               &copy; {new Date().getFullYear()} {BUSINESS_NAME}. All rights reserved.
             </div>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
               <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
-                Seattle WA <span className="w-1 h-1 bg-brand-primary rounded-full"></span> Licensed & Bonded
+                Nothing Too Big Concrete <span className="w-1 h-1 bg-brand-primary rounded-full"></span> WA Lic# NOTHITB775KE
               </span>
             </div>
           </div>

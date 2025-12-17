@@ -1,12 +1,11 @@
 
 import React from 'react';
-import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import { BUSINESS_NAME } from '../constants';
 
 const Privacy: React.FC = () => {
   return (
-    <Layout>
+    <div className="pb-32">
       <SEO title="Privacy Policy" description={`Privacy policy for ${BUSINESS_NAME}. Learn how we handle your information.`} />
       <div className="container mx-auto px-4 py-32 max-w-4xl">
         <h1 className="text-5xl font-black text-brand-dark mb-12">Privacy <span className="text-brand-primary italic">Policy</span></h1>
@@ -26,7 +25,7 @@ const Privacy: React.FC = () => {
           <p>If you have any questions about this policy, please contact us at the phone number listed on our website.</p>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 };
 

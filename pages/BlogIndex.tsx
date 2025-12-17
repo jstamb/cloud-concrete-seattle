@@ -3,6 +3,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BLOG_POSTS } from '../constants';
 
+// Map blog posts to concrete images
+const BLOG_IMAGES: Record<string, string> = {
+  'concrete-driveway-cost-seattle': '/images/concrete-50.jpeg',
+  'stamped-concrete-vs-pavers': '/images/concrete-55.jpeg',
+  'concrete-solutions-seattle-rain': '/images/concrete-60.jpeg',
+  'seattle-concrete-permits': '/images/concrete-65.jpeg',
+  'seattle-soil-foundation-tips': '/images/concrete-70.jpeg',
+  'best-time-to-pour-seattle': '/images/concrete-75.jpeg',
+  'stamped-patterns-seattle': '/images/concrete-80.jpeg',
+  'eco-friendly-concrete-seattle': '/images/concrete-85.jpeg',
+  'prepare-property-concrete': '/images/concrete-90.jpeg',
+  'historic-concrete-restoration': '/images/concrete-95.jpeg',
+};
+
 const BlogIndex: React.FC = () => {
   // Extract unique categories
   const categories = Array.from(new Set(BLOG_POSTS.map(p => p.category)));
@@ -26,10 +40,10 @@ const BlogIndex: React.FC = () => {
                     <div className="absolute top-4 left-4 bg-brand-primary text-brand-secondary px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest z-10">
                       {post.category}
                     </div>
-                    <img 
-                      src={`https://picsum.photos/seed/${post.slug}/600/400`} 
-                      alt={post.title} 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                    <img
+                      src={BLOG_IMAGES[post.slug] || '/images/concrete-100.jpeg'}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-8 flex-grow">

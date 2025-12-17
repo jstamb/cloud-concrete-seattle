@@ -1,9 +1,22 @@
 
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import { BLOG_POSTS } from '../constants';
+
+// Map blog posts to concrete images
+const BLOG_IMAGES: Record<string, string> = {
+  'concrete-driveway-cost-seattle': '/images/concrete-50.jpeg',
+  'stamped-concrete-vs-pavers': '/images/concrete-55.jpeg',
+  'concrete-solutions-seattle-rain': '/images/concrete-60.jpeg',
+  'seattle-concrete-permits': '/images/concrete-65.jpeg',
+  'seattle-soil-foundation-tips': '/images/concrete-70.jpeg',
+  'best-time-to-pour-seattle': '/images/concrete-75.jpeg',
+  'stamped-patterns-seattle': '/images/concrete-80.jpeg',
+  'eco-friendly-concrete-seattle': '/images/concrete-85.jpeg',
+  'prepare-property-concrete': '/images/concrete-90.jpeg',
+  'historic-concrete-restoration': '/images/concrete-95.jpeg',
+};
 
 const BlogCategory: React.FC = () => {
   const { categorySlug } = useParams<{ categorySlug: string }>();
@@ -16,7 +29,7 @@ const BlogCategory: React.FC = () => {
   );
 
   return (
-    <Layout>
+    <div className="pb-32">
       <SEO 
         title={`${categoryTitle} | Concrete Blog`} 
         description={`Read all our articles about ${categoryTitle}. Expert concrete advice, tips, and local Seattle guides.`}
@@ -36,10 +49,10 @@ const BlogCategory: React.FC = () => {
             {filteredPosts.map(post => (
               <article key={post.slug} className="group bg-white rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all border border-slate-100 flex flex-col">
                 <div className="h-60 bg-slate-200 overflow-hidden relative">
-                  <img 
-                    src={`https://picsum.photos/seed/${post.slug}/600/400`} 
-                    alt={post.title} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                  <img
+                    src={BLOG_IMAGES[post.slug] || '/images/concrete-100.jpeg'}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-8 flex-grow">
@@ -62,7 +75,7 @@ const BlogCategory: React.FC = () => {
           </div>
         )}
       </div>
-    </Layout>
+    </div>
   );
 };
 

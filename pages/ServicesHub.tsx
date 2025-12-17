@@ -7,15 +7,15 @@ import { SERVICES } from '../constants';
 const ServicesHub: React.FC = () => {
   return (
     <div className="pb-32">
-      <SEO 
-        title="Expert Concrete Services in Seattle" 
-        description="Explore our full range of professional concrete services, including driveways, patios, foundations, stamped concrete, and more. Quality craftsmanship for Seattle properties."
+      <SEO
+        title="Concrete Contractor Services Seattle | Driveways, Patios & More"
+        description="Full-service concrete contractor in Seattle, WA. Driveways, patios, foundations, stamped concrete, retaining walls & more. Licensed & insured. Free estimates."
       />
-      
+
       <div className="bg-brand-dark py-20 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tight">Concrete <br/><span className="text-brand-secondary italic">Specialties</span></h1>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto font-medium">Precision-engineered solutions for residential and commercial Seattle projects.</p>
+          <h1 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tight">Concrete Contractor <br/><span className="text-brand-secondary italic">Services</span></h1>
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto font-medium">Full-service concrete contractor for residential and commercial Seattle projects. Free estimates.</p>
         </div>
       </div>
 

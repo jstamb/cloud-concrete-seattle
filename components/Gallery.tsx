@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 
 const Gallery: React.FC = () => {
   const images = [
-    { src: 'https://picsum.photos/id/101/800/600', title: 'Stamped Patio in Ballard', category: 'Decorative' },
-    { src: 'https://picsum.photos/id/102/800/600', title: 'Modern Driveway in Queen Anne', category: 'Residential' },
-    { src: 'https://picsum.photos/id/103/800/600', title: 'Structural Foundation in West Seattle', category: 'Structural' },
-    { src: 'https://picsum.photos/id/104/800/600', title: 'Colored Concrete Walkway', category: 'Decorative' },
-    { src: 'https://picsum.photos/id/106/800/600', title: 'Retaining Wall Project', category: 'Structural' },
-    { src: 'https://picsum.photos/id/107/800/600', title: 'Commercial Slab Pour', category: 'Commercial' },
+    { src: '/images/concrete-23.jpeg', title: 'Stamped Patio in Ballard', category: 'Decorative' },
+    { src: '/images/concrete-15.jpeg', title: 'Modern Driveway in Queen Anne', category: 'Residential' },
+    { src: '/images/concrete-20.jpeg', title: 'Structural Foundation in West Seattle', category: 'Structural' },
+    { src: '/images/concrete-25.jpeg', title: 'Colored Concrete Walkway', category: 'Decorative' },
+    { src: '/images/concrete-87.jpeg', title: 'Retaining Wall Project', category: 'Structural' },
+    { src: '/images/concrete-35.jpeg', title: 'Commercial Slab Pour', category: 'Commercial' },
   ];
 
   const [filter, setFilter] = useState('All');
