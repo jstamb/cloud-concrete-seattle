@@ -1,12 +1,22 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const LeadForm: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const scriptLoadedRef = useRef(false);
+  const location = useLocation();
+  const [formKey, setFormKey] = useState(0);
+
+  // Force re-render when route changes
+  useEffect(() => {
+    setFormKey(prev => prev + 1);
+  }, [location.pathname]);
 
   useEffect(() => {
     if (!containerRef.current) return;
+
+    // Clear container
+    containerRef.current.innerHTML = '';
 
     // Create the form div
     const formDiv = document.createElement('div');
@@ -15,35 +25,29 @@ const LeadForm: React.FC = () => {
     formDiv.setAttribute('data-form-width', '100%');
     formDiv.setAttribute('data-form-align', 'center');
     formDiv.setAttribute('data-form-auto-height', '1');
-
-    containerRef.current.innerHTML = '';
     containerRef.current.appendChild(formDiv);
 
-    // Load script dynamically after form div exists
-    const loadScript = () => {
-      // Remove any existing DeftForm scripts first
-      const existingScripts = document.querySelectorAll('script[src*="deftform"]');
-      existingScripts.forEach(s => s.remove());
+    // Remove any existing DeftForm scripts
+    const existingScripts = document.querySelectorAll('script[src*="deftform"]');
+    existingScripts.forEach(s => s.remove());
 
-      // Clear DeftForm global if it exists
-      if ((window as any).DeftForm) {
-        delete (window as any).DeftForm;
-      }
+    // Clear DeftForm global
+    if ((window as any).DeftForm) {
+      delete (window as any).DeftForm;
+    }
 
-      const script = document.createElement('script');
-      script.src = 'https://cdn.deftform.com/embed.js';
-      script.async = true;
-      document.body.appendChild(script);
-    };
-
-    loadScript();
+    // Load fresh script
+    const script = document.createElement('script');
+    script.src = 'https://cdn.deftform.com/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
 
     return () => {
       if (containerRef.current) {
         containerRef.current.innerHTML = '';
       }
     };
-  }, []);
+  }, [formKey]);
 
   return (
     <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-[0_30px_100px_-20px_rgba(15,7,22,0.3)] border border-slate-100 relative overflow-hidden">
