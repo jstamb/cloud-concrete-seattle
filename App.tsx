@@ -15,6 +15,7 @@ import About from './pages/About';
 import ServicesHub from './pages/ServicesHub';
 import LocationsHub from './pages/LocationsHub';
 import Privacy from './pages/Privacy';
+import ThankYou from './pages/ThankYou';
 
 const App: React.FC = () => {
   return (
@@ -39,7 +40,10 @@ const App: React.FC = () => {
           
           {/* Compliance */}
           <Route path="/privacy" element={<Privacy />} />
-          
+
+          {/* Thank You */}
+          <Route path="/thank-you" element={<ThankYou />} />
+
           {/* Programmatic Service + Location pages (SEO Powerhouse) */}
           <Route path="/:combinedSlug" element={<ServiceLocationDetail />} />
         </Routes>
