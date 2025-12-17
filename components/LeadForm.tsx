@@ -1,30 +1,49 @@
 
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
 
 const LeadForm: React.FC = () => {
-  const location = useLocation();
-  const [formKey, setFormKey] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scriptLoadedRef = useRef(false);
 
   useEffect(() => {
-    // Force form re-render on route change
-    setFormKey(prev => prev + 1);
-  }, [location.pathname]);
+    if (!containerRef.current) return;
 
-  useEffect(() => {
-    // Wait for DeftForm script to be ready, then initialize
-    const initForm = () => {
+    // Create the form div
+    const formDiv = document.createElement('div');
+    formDiv.className = 'deftform';
+    formDiv.setAttribute('data-form-id', 'db76c1d5-e77c-46b1-b708-c2b36ba38fae');
+    formDiv.setAttribute('data-form-width', '100%');
+    formDiv.setAttribute('data-form-align', 'center');
+    formDiv.setAttribute('data-form-auto-height', '1');
+
+    containerRef.current.innerHTML = '';
+    containerRef.current.appendChild(formDiv);
+
+    // Load script dynamically after form div exists
+    const loadScript = () => {
+      // Remove any existing DeftForm scripts first
+      const existingScripts = document.querySelectorAll('script[src*="deftform"]');
+      existingScripts.forEach(s => s.remove());
+
+      // Clear DeftForm global if it exists
       if ((window as any).DeftForm) {
-        (window as any).DeftForm.init();
+        delete (window as any).DeftForm;
       }
+
+      const script = document.createElement('script');
+      script.src = 'https://cdn.deftform.com/embed.js';
+      script.async = true;
+      document.body.appendChild(script);
     };
 
-    // Try immediately and after a delay
-    initForm();
-    const timer = setTimeout(initForm, 500);
+    loadScript();
 
-    return () => clearTimeout(timer);
-  }, [formKey]);
+    return () => {
+      if (containerRef.current) {
+        containerRef.current.innerHTML = '';
+      }
+    };
+  }, []);
 
   return (
     <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-[0_30px_100px_-20px_rgba(15,7,22,0.3)] border border-slate-100 relative overflow-hidden">
@@ -32,15 +51,7 @@ const LeadForm: React.FC = () => {
 
       <h3 className="text-3xl font-black mb-6 text-brand-dark tracking-tight relative z-10">Request Free Quote</h3>
 
-      <div key={formKey} className="relative z-10 min-h-[300px]">
-        <div
-          className="deftform"
-          data-form-id="db76c1d5-e77c-46b1-b708-c2b36ba38fae"
-          data-form-width="100%"
-          data-form-align="center"
-          data-form-auto-height="1"
-        />
-      </div>
+      <div ref={containerRef} className="relative z-10 min-h-[300px]" />
 
       <p className="text-[10px] text-center text-slate-400 mt-6 font-bold uppercase tracking-wider relative z-10">
         Licensed • Bonded • Insured
