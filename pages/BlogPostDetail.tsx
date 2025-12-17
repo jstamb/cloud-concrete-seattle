@@ -80,11 +80,10 @@ const BlogPostDetail: React.FC = () => {
                 <p className="text-xl font-bold text-slate-700 mb-8 leading-relaxed italic border-l-8 border-brand-primary pl-6">
                   {post.excerpt}
                 </p>
-                <div className="font-medium text-slate-600 leading-relaxed space-y-6">
-                  {post.content}
-                  <p>In addition to the basic considerations, homeowners in Seattle should always keep a close eye on soil saturation levels. Our local hillsides are prone to shifting, making the base preparation for your concrete driveway or patio the most critical step in the entire project.</p>
-                  <p>At Cloud Concrete, we always recommend a minimum 4-inch compacted gravel base with high-grade rebar reinforcement to ensure your investment stands up to the Pacific Northwest's specific structural demands.</p>
-                </div>
+                <div
+                  className="font-medium text-slate-600 leading-relaxed space-y-6 [&_a]:text-brand-primary [&_a]:font-bold [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-brand-dark"
+                  dangerouslySetInnerHTML={{ __html: post.content }}
+                />
               </div>
               
               <div className="mt-16 p-10 bg-brand-dark rounded-[3rem] text-white">

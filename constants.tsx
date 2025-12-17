@@ -313,7 +313,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Tips & Advice",
     date: "January 12, 2025",
     excerpt: "An in-depth look at square foot pricing, material costs, and labor for Seattle concrete projects in the current market.",
-    content: "Calculating the cost of a concrete driveway in Seattle involves several factors: square footage, thickness, reinforcement, and local permitting. On average, homeowners can expect to pay between $12 and $22 per square foot for professional installation in 2025. Factors that drive up the price include site accessibility, the degree of excavation required, and decorative finishes like stamping or staining. In neighborhoods like Queen Anne or Magnolia where slopes are steep, engineering costs and reinforced footings may also apply. At Cloud Concrete, we provide detailed, transparent quotes that break down every cost element so you can make an informed decision for your property's future.",
+    content: `<p>Calculating the cost of a <a href="/services/concrete-driveways">concrete driveway</a> in Seattle involves several factors: square footage, thickness, reinforcement, and local permitting. On average, homeowners can expect to pay between $12 and $22 per square foot for professional installation in 2025.</p>
+    <p>Factors that drive up the price include site accessibility, the degree of excavation required, and decorative finishes like <a href="/services/stamped-concrete">stamping</a> or <a href="/services/colored-concrete">staining</a>. In neighborhoods like <a href="/locations/queen-anne">Queen Anne</a> or <a href="/locations/magnolia">Magnolia</a> where slopes are steep, engineering costs and reinforced footings may also apply.</p>
+    <p>At Cloud Concrete, we provide detailed, transparent quotes that break down every cost element so you can make an informed decision for your property's future. <a href="/contact">Contact us today</a> for a free estimate on your driveway project.</p>`,
     author: "Cloud Concrete Staff"
   },
   {
@@ -322,7 +324,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Design",
     date: "December 05, 2024",
     excerpt: "Why decorative concrete is often a better choice than pavers for Seattle's unique climate and maintenance needs.",
-    content: "While pavers look great initially, Seattle's consistent rain often leads to weed growth in joints and shifting due to soil saturation. Stamped concrete provides a monolithic surface that is easier to maintain and doesn't shift over time. With modern stamping techniques, we can replicate the look of pavers perfectly while providing a surface that is much more durable against the PNW weather. Additionally, stamped concrete eliminates the problem of ants and moss growing between pavers, a common headache for Seattle homeowners. From a long-term value perspective, stamped concrete offers a high-end look with significantly lower maintenance costs.",
+    content: `<p>While pavers look great initially, Seattle's consistent rain often leads to weed growth in joints and shifting due to soil saturation. <a href="/services/stamped-concrete">Stamped concrete</a> provides a monolithic surface that is easier to maintain and doesn't shift over time.</p>
+    <p>With modern stamping techniques, we can replicate the look of pavers perfectly while providing a surface that is much more durable against the PNW weather. Additionally, stamped concrete eliminates the problem of ants and moss growing between pavers, a common headache for Seattle homeowners.</p>
+    <p>From a long-term value perspective, stamped concrete offers a high-end look with significantly lower maintenance costs. Whether you're considering a new <a href="/services/concrete-patios">patio</a> or <a href="/services/concrete-driveways">driveway</a>, our <a href="/services/decorative-concrete">decorative concrete options</a> provide the beauty of natural stone without the ongoing maintenance headaches.</p>`,
     author: "Cloud Concrete Staff"
   },
   {
@@ -331,7 +335,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Seattle Local Guides",
     date: "February 22, 2025",
     excerpt: "How we engineer concrete to handle 37+ inches of annual rainfall and prevent structural erosion.",
-    content: "Drainage is the single most important factor in Seattle concrete work. Without proper subgrade preparation and runoff management, even the thickest slab will eventually fail due to hydrostatic pressure and soil erosion. At Cloud Concrete, we prioritize geological audits to ensure water moves away from your structure, preventing soil erosion and frost heave. We use specialized drainage rock as our base and integrate channel drains or catch basins into our designs where necessary. Our goal is to ensure your concrete remains dry and stable even during the heaviest November downpours.",
+    content: `<p>Drainage is the single most important factor in Seattle concrete work. Without proper subgrade preparation and runoff management, even the thickest slab will eventually fail due to hydrostatic pressure and soil erosion.</p>
+    <p>At Cloud Concrete, we prioritize geological audits to ensure water moves away from your structure, preventing soil erosion and frost heave. We use specialized drainage rock as our base and integrate channel drains or catch basins into our <a href="/services/concrete-driveways">driveway</a> and <a href="/services/concrete-patios">patio</a> designs where necessary.</p>
+    <p>Our goal is to ensure your concrete remains dry and stable even during the heaviest November downpours. We also recommend proper <a href="/services/concrete-sealing">concrete sealing</a> to protect against moisture penetration. <a href="/contact">Schedule a consultation</a> to learn how we engineer concrete specifically for Seattle's climate.</p>`,
     author: "Cloud Concrete Staff"
   },
   {
@@ -340,7 +346,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Industry News",
     date: "March 01, 2025",
     excerpt: "What homeowners need to know about SDOT and DPD regulations when planning their next project.",
-    content: "Navigating the City of Seattle's permit requirements can be daunting. Generally, any work within the public right-of-way (like sidewalks or curb cuts) requires an SDOT Street Use permit. For residential slabs on your property, requirements vary by size and impact on neighbors. In 2025, the city has updated its regulations regarding pervious surfaces to manage stormwater runoff. We stay up-to-date with all local ordinances to ensure your project is 100% legal. Our team handles the entire application process, including site plan drawings and inspection scheduling, saving you time and stress.",
+    content: `<p>Navigating the City of Seattle's permit requirements can be daunting. Generally, any work within the public right-of-way (like <a href="/services/concrete-sidewalks">sidewalks</a> or curb cuts) requires an SDOT Street Use permit.</p>
+    <p>For residential slabs on your property, requirements vary by size and impact on neighbors. In 2025, the city has updated its regulations regarding pervious surfaces to manage stormwater runoff.</p>
+    <p>We stay up-to-date with all local ordinances to ensure your project is 100% legal. Our team handles the entire application process, including site plan drawings and inspection scheduling, saving you time and stress. <a href="/contact">Contact us</a> to learn more about permit requirements for your specific project.</p>`,
     author: "Cloud Concrete Staff"
   },
   {
@@ -349,7 +357,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Seattle Local Guides",
     date: "June 30, 2024",
     excerpt: "How clay and glacial till affect your home's structural stability and what you can do about it.",
-    content: "Seattle sits on a complex mix of glacial till and heavy clay. This soil can expand and contract significantly with moisture changes, which can lead to foundation settling and basement leaks. We discuss why deep footings and proper compaction are non-negotiable for Seattle foundations. When pouring a new foundation or addition, we often recommend helical piers or specialized footing designs depending on the soil report. Understanding the geology of your specific neighborhood is the first step in building a foundation that will last for a century.",
+    content: `<p>Seattle sits on a complex mix of glacial till and heavy clay. This soil can expand and contract significantly with moisture changes, which can lead to foundation settling and basement leaks.</p>
+    <p>We discuss why deep footings and proper compaction are non-negotiable for Seattle <a href="/services/concrete-foundations">foundations</a>. When pouring a new foundation or addition, we often recommend helical piers or specialized footing designs depending on the soil report.</p>
+    <p>Understanding the geology of your specific neighborhood is the first step in building a foundation that will last for a century. For properties on slopes, <a href="/services/concrete-retaining-walls">retaining walls</a> may also be necessary to manage soil pressure. <a href="/contact">Request a consultation</a> to discuss your foundation needs.</p>`,
     author: "Cloud Concrete Staff"
   },
   {
@@ -358,7 +368,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Tips & Advice",
     date: "April 15, 2025",
     excerpt: "Navigating the PNW weather for a perfect cure. When to schedule your project for the best results.",
-    content: "While professional crews can pour concrete almost year-round in Seattle, certain windows offer better predictability for the finishing process. We discuss the pros and cons of spring, summer, and fall pours. Summer offers the most stable conditions, but also requires careful moisture management to prevent the concrete from drying too quickly. Fall pours are excellent for curing but require a keen eye on the rain forecast. We share our insider tips on how we manage the weather to ensure every pour achieves maximum strength and aesthetic perfection, regardless of the month.",
+    content: `<p>While professional crews can pour concrete almost year-round in Seattle, certain windows offer better predictability for the finishing process. We discuss the pros and cons of spring, summer, and fall pours.</p>
+    <p>Summer offers the most stable conditions, but also requires careful moisture management to prevent the concrete from drying too quickly. Fall pours are excellent for curing but require a keen eye on the rain forecast.</p>
+    <p>We share our insider tips on how we manage the weather to ensure every <a href="/services/concrete-driveways">driveway</a>, <a href="/services/concrete-patios">patio</a>, or <a href="/services/concrete-foundations">foundation</a> pour achieves maximum strength and aesthetic perfection, regardless of the month. <a href="/contact">Contact us</a> to schedule your project during the optimal window.</p>`,
     author: "Cloud Concrete Staff"
   },
   {
@@ -367,7 +379,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Design Inspiration",
     date: "May 10, 2025",
     excerpt: "From Ashlar Slate to Wood Plank, discover the most popular decorative designs for Pacific Northwest homes.",
-    content: "Ready to transform your backyard? We've compiled a list of the top 10 stamped patterns currently trending in Seattle. We highlight the timeless beauty of Random Stone for traditional homes and the sleek, modern look of Large Tile for contemporary Seattle architecture. We also explore color palettes that complement the lush greens and grays of the PNW landscape. Whether you want a rustic wood-look patio or a sophisticated stone entryway, this guide will provide the inspiration you need to start your design process.",
+    content: `<p>Ready to transform your backyard? We've compiled a list of the top 10 <a href="/services/stamped-concrete">stamped patterns</a> currently trending in Seattle.</p>
+    <p>We highlight the timeless beauty of Random Stone for traditional homes and the sleek, modern look of Large Tile for contemporary Seattle architecture. We also explore <a href="/services/colored-concrete">color palettes</a> that complement the lush greens and grays of the PNW landscape.</p>
+    <p>Whether you want a rustic wood-look <a href="/services/concrete-patios">patio</a> or a sophisticated stone entryway, this guide will provide the inspiration you need to start your design process. Explore our full range of <a href="/services/decorative-concrete">decorative concrete</a> options or <a href="/contact">request a free consultation</a> today.</p>`,
     author: "Cloud Concrete Staff"
   },
   {
@@ -376,7 +390,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Tips & Advice",
     date: "May 22, 2025",
     excerpt: "Sustainable concrete choices for environmentally conscious homeowners in the Emerald City.",
-    content: "Seattle homeowners are some of the most environmentally conscious in the country. In this post, we explore sustainable concrete options including the use of recycled aggregates and fly-ash as a cement replacement. We also deep-dive into pervious concrete, which allows rainwater to filter through the slab and back into the ground, reducing the load on our city's storm drains. Discover how you can have a beautiful, durable concrete surface while minimizing your property's environmental footprint.",
+    content: `<p>Seattle homeowners are some of the most environmentally conscious in the country. In this post, we explore sustainable concrete options including the use of recycled aggregates and fly-ash as a cement replacement.</p>
+    <p>We also deep-dive into pervious concrete, which allows rainwater to filter through the slab and back into the ground, reducing the load on our city's storm drains.</p>
+    <p>Discover how you can have a beautiful, durable <a href="/services/concrete-driveways">driveway</a> or <a href="/services/concrete-patios">patio</a> while minimizing your property's environmental footprint. <a href="/contact">Contact us</a> to discuss eco-friendly options for your next project.</p>`,
     author: "Cloud Concrete Staff"
   },
   {
@@ -385,7 +401,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Tips & Advice",
     date: "June 05, 2025",
     excerpt: "A homeowner's checklist for a smooth and successful project day. From access to utility marking.",
-    content: "Preparation is key to a successful pour. We walk you through everything you need to do before our crew arrives. This includes clearing the work area of obstacles, notifying neighbors of potential noise, and ensuring we have clear access for our trucks and equipment. We also explain the importance of 'Call Before You Dig' (811) to mark underground utilities. By following this simple checklist, you'll help ensure that project day goes smoothly and our finishers can focus on what they do best: creating a perfect concrete surface.",
+    content: `<p>Preparation is key to a successful pour. We walk you through everything you need to do before our crew arrives. This includes clearing the work area of obstacles, notifying neighbors of potential noise, and ensuring we have clear access for our trucks and equipment.</p>
+    <p>We also explain the importance of 'Call Before You Dig' (811) to mark underground utilities. By following this simple checklist, you'll help ensure that project day goes smoothly and our finishers can focus on what they do best: creating a perfect concrete surface.</p>
+    <p>Whether you're planning a <a href="/services/concrete-driveways">new driveway</a>, <a href="/services/concrete-patios">patio</a>, or <a href="/services/concrete-sidewalks">walkway</a>, proper preparation makes all the difference. <a href="/contact">Contact us</a> to get started with your project.</p>`,
     author: "Cloud Concrete Staff"
   },
   {
@@ -394,7 +412,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Seattle Local Guides",
     date: "June 20, 2025",
     excerpt: "Preserving the character of Seattle's older neighborhoods through expert concrete repair.",
-    content: "Neighborhoods like Capitol Hill and Queen Anne are full of historic homes with original concrete features that are starting to show their age. We discuss how to restore vintage walkways and porch steps while maintaining their historic character. We explore color-matching techniques for old concrete and how to structurally reinforce aging slabs without a total teardown. Preserving the architectural history of Seattle is a passion of ours, and we share the specialized techniques we use for heritage projects.",
+    content: `<p>Neighborhoods like <a href="/locations/capitol-hill">Capitol Hill</a> and <a href="/locations/queen-anne">Queen Anne</a> are full of historic homes with original concrete features that are starting to show their age.</p>
+    <p>We discuss how to restore vintage walkways and <a href="/services/concrete-steps">porch steps</a> while maintaining their historic character. We explore color-matching techniques for old concrete and how to structurally reinforce aging slabs without a total teardown.</p>
+    <p>Preserving the architectural history of Seattle is a passion of ours, and we share the specialized techniques we use for heritage projects. Our <a href="/services/concrete-repair">concrete repair</a> services can bring new life to your home's original features. <a href="/contact">Contact us</a> for a restoration consultation.</p>`,
     author: "Cloud Concrete Staff"
   }
 ];
