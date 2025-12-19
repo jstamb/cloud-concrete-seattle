@@ -1,11 +1,12 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const FORM_ID = 'db76c1d5-e77c-46b1-b708-c2b36ba38fae';
 
 const LeadForm: React.FC = () => {
   const location = useLocation();
+  const [iframeHeight, setIframeHeight] = useState(500);
 
   // Create iframe content with the form - isolates DeftForm JS in its own context
   const iframeContent = `
@@ -16,7 +17,7 @@ const LeadForm: React.FC = () => {
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: system-ui, -apple-system, sans-serif; }
+        body { font-family: system-ui, -apple-system, sans-serif; overflow: hidden; }
       </style>
     </head>
     <body>
@@ -27,12 +28,46 @@ const LeadForm: React.FC = () => {
         data-form-auto-height="1">
       </div>
       <script src="https://cdn.deftform.com/embed.js" async></script>
+      <script>
+        // Send height updates to parent
+        function sendHeight() {
+          const height = document.body.scrollHeight;
+          window.parent.postMessage({ type: 'deftform-height', height: height }, '*');
+        }
+
+        // Monitor for size changes
+        const observer = new ResizeObserver(sendHeight);
+        observer.observe(document.body);
+
+        // Also check periodically for DeftForm's dynamic content
+        setInterval(sendHeight, 500);
+
+        // Initial send
+        window.addEventListener('load', sendHeight);
+      </script>
     </body>
     </html>
   `;
 
   // Use location.pathname as key to force iframe reload on navigation
   const iframeKey = `deftform-${location.pathname.replace(/\//g, '-')}`;
+
+  // Listen for height messages from iframe
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      if (event.data?.type === 'deftform-height' && event.data.height) {
+        setIframeHeight(event.data.height + 20); // Add padding
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
+
+  // Reset height when route changes
+  useEffect(() => {
+    setIframeHeight(500);
+  }, [location.pathname]);
 
   return (
     <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-[0_30px_100px_-20px_rgba(15,7,22,0.3)] border border-slate-100 relative overflow-hidden">
@@ -43,8 +78,8 @@ const LeadForm: React.FC = () => {
       <iframe
         key={iframeKey}
         srcDoc={iframeContent}
-        className="w-full border-0 min-h-[400px] relative z-10"
-        style={{ overflow: 'hidden' }}
+        className="w-full border-0 relative z-10"
+        style={{ height: `${iframeHeight}px`, overflow: 'hidden' }}
         scrolling="no"
         title="Contact Form"
         sandbox="allow-scripts allow-forms allow-same-origin"
