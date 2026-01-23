@@ -1,9 +1,14 @@
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import LeadForm from '@/components/LeadForm';
+import { BreadcrumbSchema } from '@/components/JsonLd';
+import { NEIGHBORHOODS, SERVICES, PHONE_NUMBER } from '@/lib/constants';
 
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import LeadForm from '../components/LeadForm';
-import SEO from '../components/SEO';
-import { NEIGHBORHOODS, SERVICES, PHONE_NUMBER } from '../constants';
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
 // Get a concrete image based on location index
 const getLocationImage = (slug: string): string => {
@@ -13,21 +18,49 @@ const getLocationImage = (slug: string): string => {
   return `/images/concrete-${imageNum}.jpeg`;
 };
 
-const LocationDetail: React.FC = () => {
-  const { slug } = useParams<{ slug: string }>();
+export async function generateStaticParams() {
+  return NEIGHBORHOODS.map((neighborhood) => ({
+    slug: neighborhood.slug,
+  }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
   const location = NEIGHBORHOODS.find(n => n.slug === slug);
 
-  if (!location) return <div className="py-20 text-center">Location not found</div>;
+  if (!location) {
+    return { title: 'Location Not Found' };
+  }
+
+  return {
+    title: `Concrete Contractor in ${location.name}, Seattle | Driveways, Patios & More`,
+    description: `Looking for a concrete contractor in ${location.name}, Seattle? Cloud Concrete provides expert driveway, patio, and foundation services in ${location.zip}. Free estimates. Call (206) 495-0997.`,
+  };
+}
+
+export default async function LocationDetail({ params }: Props) {
+  const { slug } = await params;
+  const location = NEIGHBORHOODS.find(n => n.slug === slug);
+
+  if (!location) {
+    notFound();
+  }
 
   return (
     <div className="pb-32">
-      <SEO
-        title={`Concrete Contractor in ${location.name}, Seattle | Driveways, Patios & More`}
-        description={`Looking for a concrete contractor in ${location.name}, Seattle? Cloud Concrete provides expert driveway, patio, and foundation services in ${location.zip}. Free estimates. Call (206) 495-0997.`}
-      />
+      <BreadcrumbSchema items={[
+        { name: 'Locations', url: '/locations' },
+        { name: location.name, url: `/locations/${location.slug}` },
+      ]} />
+
       <div className="bg-brand-dark py-20 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src={getLocationImage(location.slug)} alt={`${location.name}, Seattle`} className="w-full h-full object-cover" />
+          <Image
+            src={getLocationImage(location.slug)}
+            alt={`${location.name}, Seattle`}
+            fill
+            className="object-cover"
+          />
         </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tight">Concrete Contractor in <br/><span className="text-brand-secondary italic">{location.name}, Seattle</span></h1>
@@ -47,9 +80,9 @@ const LocationDetail: React.FC = () => {
           <div className="lg:w-2/3">
             <h2 className="text-3xl font-black text-brand-dark mb-4 uppercase tracking-tight">Your Trusted Concrete Contractor in {location.name}</h2>
             <div className="w-20 h-1.5 bg-brand-primary mb-8"></div>
-            
+
             <p className="text-base text-slate-600 mb-10 leading-relaxed font-medium">
-              Soil conditions in {location.zip} vary, but our expertise doesn't. We provide structural reinforcement and drainage management designed specifically for the {location.name} landscape.
+              Soil conditions in {location.zip} vary, but our expertise doesn&apos;t. We provide structural reinforcement and drainage management designed specifically for the {location.name} landscape.
             </p>
 
             <div className="bg-slate-900 text-white p-8 rounded-2xl mb-12 relative overflow-hidden">
@@ -73,9 +106,9 @@ const LocationDetail: React.FC = () => {
             <h3 className="text-2xl font-black mb-6 tracking-tight uppercase">Services Available in {location.name}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-16">
               {SERVICES.map(service => (
-                <Link 
-                  key={service.slug} 
-                  to={`/${service.slug}-${location.slug}`}
+                <Link
+                  key={service.slug}
+                  href={`/${service.slug}-${location.slug}`}
                   className="group p-4 bg-white border border-slate-100 rounded-xl shadow-sm hover:shadow-lg hover:border-brand-primary/20 transition-all duration-300 flex flex-col h-full"
                 >
                   <div className="flex items-center gap-2 mb-2">
@@ -111,7 +144,7 @@ const LocationDetail: React.FC = () => {
                 <h4 className="text-xs font-black mb-4 uppercase tracking-[0.2em] text-brand-secondary">Nearby Hubs</h4>
                 <div className="grid grid-cols-1 gap-2">
                   {NEIGHBORHOODS.filter(n => n.slug !== location.slug).slice(0, 8).map(n => (
-                    <Link key={n.slug} to={`/locations/${n.slug}`} className="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-white transition-all">
+                    <Link key={n.slug} href={`/locations/${n.slug}`} className="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-white transition-all">
                       Concrete in {n.name} &rarr;
                     </Link>
                   ))}
@@ -123,6 +156,4 @@ const LocationDetail: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default LocationDetail;
+}

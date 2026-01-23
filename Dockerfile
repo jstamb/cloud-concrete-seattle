@@ -12,20 +12,33 @@ RUN npm ci
 # Copy source files
 COPY . .
 
-# Build the app
+# Build the Next.js app
 RUN npm run build
 
-# Production stage
-FROM nginx:alpine
+# Production stage - use Node.js for Next.js standalone output
+FROM node:20-alpine AS runner
 
-# Copy custom nginx config for SPA routing
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+WORKDIR /app
 
-# Copy built assets from builder
-COPY --from=builder /app/dist /usr/share/nginx/html
+ENV NODE_ENV=production
+ENV PORT=8080
+
+# Don't run as root
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# Copy the standalone output
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/public ./public
+
+# Set correct ownership
+RUN chown -R nextjs:nodejs /app
+
+USER nextjs
 
 # Cloud Run uses port 8080
 EXPOSE 8080
 
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Start the Next.js server
+CMD ["node", "server.js"]

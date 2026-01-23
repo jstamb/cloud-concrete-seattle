@@ -1,18 +1,21 @@
+'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
+import Image from 'next/image';
 
-const Gallery: React.FC = () => {
-  const images = [
-    { src: '/images/concrete-23.jpeg', title: 'Stamped Patio in Ballard', category: 'Decorative' },
-    { src: '/images/concrete-15.jpeg', title: 'Modern Driveway in Queen Anne', category: 'Residential' },
-    { src: '/images/concrete-20.jpeg', title: 'Structural Foundation in West Seattle', category: 'Structural' },
-    { src: '/images/concrete-25.jpeg', title: 'Colored Concrete Walkway', category: 'Decorative' },
-    { src: '/images/concrete-87.jpeg', title: 'Retaining Wall Project', category: 'Structural' },
-    { src: '/images/concrete-35.jpeg', title: 'Commercial Slab Pour', category: 'Commercial' },
-  ];
+const images = [
+  { src: '/images/concrete-23.jpeg', title: 'Stamped Patio in Ballard', category: 'Decorative' },
+  { src: '/images/concrete-15.jpeg', title: 'Modern Driveway in Queen Anne', category: 'Residential' },
+  { src: '/images/concrete-20.jpeg', title: 'Structural Foundation in West Seattle', category: 'Structural' },
+  { src: '/images/concrete-25.jpeg', title: 'Colored Concrete Walkway', category: 'Decorative' },
+  { src: '/images/concrete-87.jpeg', title: 'Retaining Wall Project', category: 'Structural' },
+  { src: '/images/concrete-35.jpeg', title: 'Commercial Slab Pour', category: 'Commercial' },
+];
 
+const categories = ['All', 'Residential', 'Decorative', 'Structural', 'Commercial'];
+
+export default function Gallery() {
   const [filter, setFilter] = useState('All');
-  const categories = ['All', 'Residential', 'Decorative', 'Structural', 'Commercial'];
 
   const filteredImages = filter === 'All' ? images : images.filter(img => img.category === filter);
 
@@ -31,8 +34,8 @@ const Gallery: React.FC = () => {
               key={cat}
               onClick={() => setFilter(cat)}
               className={`px-6 py-2 rounded-full text-sm font-black uppercase tracking-widest transition-all ${
-                filter === cat 
-                  ? 'bg-brand-primary text-white shadow-xl' 
+                filter === cat
+                  ? 'bg-brand-primary text-white shadow-xl'
                   : 'bg-slate-100 text-slate-500 hover:bg-slate-200'
               }`}
             >
@@ -44,10 +47,11 @@ const Gallery: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredImages.map((img, idx) => (
             <div key={idx} className="group relative rounded-[2.5rem] overflow-hidden shadow-xl aspect-video cursor-pointer">
-              <img 
-                src={img.src} 
-                alt={img.title} 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+              <Image
+                src={img.src}
+                alt={img.title}
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
                 <span className="text-brand-secondary text-xs font-black uppercase tracking-widest mb-2">{img.category}</span>
@@ -59,6 +63,4 @@ const Gallery: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default Gallery;
+}

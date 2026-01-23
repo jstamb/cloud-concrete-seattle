@@ -1,16 +1,21 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { BreadcrumbSchema } from '@/components/JsonLd';
+import { PHONE_NUMBER } from '@/lib/constants';
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
-import { PHONE_NUMBER } from '../constants';
+export const metadata: Metadata = {
+  title: 'Thank You',
+  description: "Thank you for contacting Cloud Concrete of Seattle. We'll be in touch shortly.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
-const ThankYou: React.FC = () => {
+export default function ThankYou() {
   return (
     <div className="pb-32">
-      <SEO
-        title="Thank You | Cloud Concrete of Seattle"
-        description="Thank you for contacting Cloud Concrete of Seattle. We'll be in touch shortly."
-      />
+      <BreadcrumbSchema items={[{ name: 'Thank You', url: '/thank-you' }]} />
 
       <div className="min-h-[70vh] flex items-center justify-center py-24">
         <div className="container mx-auto px-4">
@@ -26,7 +31,7 @@ const ThankYou: React.FC = () => {
             </h1>
 
             <p className="text-xl text-slate-600 mb-8 font-medium leading-relaxed">
-              We've received your request and will be in touch within 24 hours to discuss your project.
+              We&apos;ve received your request and will be in touch within 24 hours to discuss your project.
             </p>
 
             <div className="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 mb-10">
@@ -38,11 +43,11 @@ const ThankYou: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-6 h-6 bg-brand-primary text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">2</span>
-                  <span className="text-slate-600 font-medium">We'll call to schedule a free on-site consultation</span>
+                  <span className="text-slate-600 font-medium">We&apos;ll call to schedule a free on-site consultation</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-6 h-6 bg-brand-primary text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">3</span>
-                  <span className="text-slate-600 font-medium">You'll receive a detailed written estimate</span>
+                  <span className="text-slate-600 font-medium">You&apos;ll receive a detailed written estimate</span>
                 </li>
               </ul>
             </div>
@@ -55,7 +60,7 @@ const ThankYou: React.FC = () => {
             </p>
 
             <Link
-              to="/"
+              href="/"
               className="inline-flex items-center gap-2 bg-brand-dark text-white px-8 py-4 rounded-full font-bold hover:bg-brand-primary transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,6 +73,4 @@ const ThankYou: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default ThankYou;
+}

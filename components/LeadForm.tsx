@@ -1,11 +1,12 @@
+'use client';
 
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const FORM_ID = 'db76c1d5-e77c-46b1-b708-c2b36ba38fae';
 
-const LeadForm: React.FC = () => {
-  const location = useLocation();
+export default function LeadForm() {
+  const pathname = usePathname();
   const [iframeHeight, setIframeHeight] = useState(500);
 
   // Create iframe content with the form - isolates DeftForm JS in its own context
@@ -49,8 +50,8 @@ const LeadForm: React.FC = () => {
     </html>
   `;
 
-  // Use location.pathname as key to force iframe reload on navigation
-  const iframeKey = `deftform-${location.pathname.replace(/\//g, '-')}`;
+  // Use pathname as key to force iframe reload on navigation
+  const iframeKey = `deftform-${pathname.replace(/\//g, '-')}`;
 
   // Listen for height messages from iframe
   useEffect(() => {
@@ -67,7 +68,7 @@ const LeadForm: React.FC = () => {
   // Reset height when route changes
   useEffect(() => {
     setIframeHeight(500);
-  }, [location.pathname]);
+  }, [pathname]);
 
   return (
     <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-[0_30px_100px_-20px_rgba(15,7,22,0.3)] border border-slate-100 relative overflow-hidden">
@@ -86,10 +87,8 @@ const LeadForm: React.FC = () => {
       />
 
       <p className="text-[10px] text-center text-slate-400 mt-6 font-bold uppercase tracking-wider relative z-10">
-        Licensed • Bonded • Insured
+        Licensed &bull; Bonded &bull; Insured
       </p>
     </div>
   );
-};
-
-export default LeadForm;
+}

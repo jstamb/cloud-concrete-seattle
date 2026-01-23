@@ -1,16 +1,17 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { BreadcrumbSchema } from '@/components/JsonLd';
+import { SERVICES } from '@/lib/constants';
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
-import { SERVICES } from '../constants';
+export const metadata: Metadata = {
+  title: 'Concrete Contractor Services Seattle | Driveways, Patios & More',
+  description: "Full-service concrete contractor in Seattle, WA. Driveways, patios, foundations, stamped concrete, retaining walls & more. Licensed & insured. Free estimates.",
+};
 
-const ServicesHub: React.FC = () => {
+export default function ServicesHub() {
   return (
     <div className="pb-32">
-      <SEO
-        title="Concrete Contractor Services Seattle | Driveways, Patios & More"
-        description="Full-service concrete contractor in Seattle, WA. Driveways, patios, foundations, stamped concrete, retaining walls & more. Licensed & insured. Free estimates."
-      />
+      <BreadcrumbSchema items={[{ name: 'Services', url: '/services' }]} />
 
       <div className="bg-brand-dark py-20 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -22,9 +23,9 @@ const ServicesHub: React.FC = () => {
       <div className="container mx-auto px-4 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {SERVICES.map(service => (
-            <Link 
-              key={service.slug} 
-              to={`/services/${service.slug}`}
+            <Link
+              key={service.slug}
+              href={`/services/${service.slug}`}
               className="group p-5 bg-white border border-slate-100 rounded-2xl hover:shadow-xl hover:border-brand-primary/20 transition-all duration-300 flex flex-col h-full"
             >
               <div className="flex items-center gap-3 mb-2">
@@ -43,6 +44,4 @@ const ServicesHub: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default ServicesHub;
+}

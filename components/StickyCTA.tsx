@@ -1,11 +1,11 @@
+'use client';
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { PHONE_NUMBER } from '../constants';
+import Link from 'next/link';
+import { PHONE_NUMBER } from '@/lib/constants';
 
-const StickyCTA: React.FC = () => {
+export default function StickyCTA() {
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] w-[90%] md:hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] w-[90%] md:hidden">
       <div className="bg-brand-dark/95 backdrop-blur-xl border border-white/10 p-3 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center gap-3">
         <a
           href={`tel:${PHONE_NUMBER}`}
@@ -17,7 +17,7 @@ const StickyCTA: React.FC = () => {
           Call Our Team
         </a>
         <Link
-          to="/contact"
+          href="/contact"
           className="w-14 h-14 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-brand-secondary"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -27,6 +27,4 @@ const StickyCTA: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default StickyCTA;
+}

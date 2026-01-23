@@ -1,35 +1,50 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import LeadForm from '@/components/LeadForm';
+import { BreadcrumbSchema, ServiceSchema } from '@/components/JsonLd';
+import { SERVICES, PHONE_NUMBER, NEIGHBORHOODS, BUSINESS_NAME } from '@/lib/constants';
 
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import LeadForm from '../components/LeadForm';
-import SEO from '../components/SEO';
-import { SERVICES, PHONE_NUMBER, NEIGHBORHOODS, BUSINESS_NAME } from '../constants';
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
-const ServiceDetail: React.FC = () => {
-  const { slug } = useParams<{ slug: string }>();
+export async function generateStaticParams() {
+  return SERVICES.map((service) => ({
+    slug: service.slug,
+  }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
   const service = SERVICES.find(s => s.slug === slug);
 
-  if (!service) return <div className="py-20 text-center text-2xl font-black">Service not found</div>;
+  if (!service) {
+    return { title: 'Service Not Found' };
+  }
+
+  return {
+    title: `${service.name} Contractor Seattle WA | Installation & Repair`,
+    description: `Looking for a ${service.name.toLowerCase()} contractor in Seattle? Cloud Concrete offers professional installation & repair with free estimates. Licensed, bonded & insured. Call (206) 495-0997.`,
+  };
+}
+
+export default async function ServiceDetail({ params }: Props) {
+  const { slug } = await params;
+  const service = SERVICES.find(s => s.slug === slug);
+
+  if (!service) {
+    notFound();
+  }
 
   return (
     <div className="pb-32">
-      <SEO
-        title={`${service.name} Contractor Seattle WA | Installation & Repair`}
-        description={`Looking for a ${service.name.toLowerCase()} contractor in Seattle? Cloud Concrete offers professional installation & repair with free estimates. Licensed, bonded & insured. Call (206) 495-0997.`}
-        schemaType="Service"
-        schemaData={{
-          "serviceType": service.name,
-          "description": service.shortDescription,
-          "provider": {
-            "@type": "ConcreteContractor",
-            "name": BUSINESS_NAME
-          },
-          "areaServed": {
-            "@type": "City",
-            "name": "Seattle"
-          }
-        }}
-      />
+      <BreadcrumbSchema items={[
+        { name: 'Services', url: '/services' },
+        { name: service.name, url: `/services/${service.slug}` },
+      ]} />
+      <ServiceSchema serviceName={service.name} description={service.shortDescription} />
+
       <div className="bg-brand-dark py-24 md:py-32 text-white relative overflow-hidden">
         <div className="absolute bottom-0 right-0 w-1/2 h-full bg-brand-primary/5 -skew-x-12 translate-x-1/4"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -57,10 +72,10 @@ const ServiceDetail: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-20">
           <div className="lg:w-2/3">
             <div className="prose prose-slate prose-xl max-w-none">
-              <h2 className="text-4xl font-black text-brand-dark mb-8 tracking-tight">Seattle's Trusted {service.name} Contractor</h2>
+              <h2 className="text-4xl font-black text-brand-dark mb-8 tracking-tight">Seattle&apos;s Trusted {service.name} Contractor</h2>
               <div className="w-20 h-2 bg-brand-primary mb-10"></div>
               <p className="text-slate-600 font-medium leading-relaxed mb-10">{service.longDescription}</p>
-              
+
               <h3 className="text-3xl font-black text-brand-dark mb-8 tracking-tight">Key Benefits of Our {service.name}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
                 {[
@@ -117,11 +132,11 @@ const ServiceDetail: React.FC = () => {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/20 rounded-full -mr-16 -mt-16"></div>
                 <h3 className="text-3xl font-black mb-6 relative z-10 leading-tight">Serving Every Seattle District</h3>
                 <p className="mb-10 text-slate-300 font-medium leading-relaxed relative z-10">
-                  Whether you're in Ballard, Queen Anne, or West Seattle, our local crews are ready to deliver {service.name.toLowerCase()} excellence. We understand the specific permitting requirements for every district in the City of Seattle.
+                  Whether you&apos;re in Ballard, Queen Anne, or West Seattle, our local crews are ready to deliver {service.name.toLowerCase()} excellence. We understand the specific permitting requirements for every district in the City of Seattle.
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
                   {NEIGHBORHOODS.slice(0, 8).map(n => (
-                    <Link key={n.slug} to={`/${service.slug}-${n.slug}`} className="text-xs font-black uppercase tracking-widest text-slate-400 hover:text-brand-secondary transition-colors">
+                    <Link key={n.slug} href={`/${service.slug}-${n.slug}`} className="text-xs font-black uppercase tracking-widest text-slate-400 hover:text-brand-secondary transition-colors">
                       {n.name} &rarr;
                     </Link>
                   ))}
@@ -149,6 +164,4 @@ const ServiceDetail: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default ServiceDetail;
+}
