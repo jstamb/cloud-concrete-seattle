@@ -1,0 +1,73 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema.astro';
+import { BLOG_POSTS, BLOG_IMAGES } from '@/lib/constants';
+
+export function getStaticPaths() {
+  const categories = Array.from(new Set(BLOG_POSTS.map(p => p.category)));
+  return categories.map((category) => ({
+    params: { categorySlug: category.toLowerCase().replace(/ /g, '-') },
+    props: { categoryTitle: category }
+  }));
+}
+
+const { categorySlug } = Astro.params;
+const { categoryTitle } = Astro.props;
+
+const filteredPosts = BLOG_POSTS.filter(post =>
+  post.category.toLowerCase().replace(/ /g, '-') === categorySlug
+);
+
+const title = `${categoryTitle} | Concrete Blog`;
+const description = `Read all our articles about ${categoryTitle}. Expert concrete advice, tips, and local Seattle guides.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <BreadcrumbSchema items={[
+    { name: 'Blog', url: '/blog' },
+    { name: categoryTitle, url: `/blog/category/${categorySlug}` },
+  ]} />
+
+  <div class="pb-32">
+    <div class="bg-brand-dark py-24 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <a href="/blog" class="text-brand-secondary font-black uppercase tracking-widest text-xs mb-4 inline-block hover:underline">&larr; Back to all posts</a>
+        <h1 class="text-5xl md:text-7xl font-black mb-6">{categoryTitle}</h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto font-medium">Deep dives and expert insights into {categoryTitle.toLowerCase()}.</p>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-24">
+      {filteredPosts.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {filteredPosts.map(post => (
+            <article class="group bg-white rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all border border-slate-100 flex flex-col">
+              <div class="h-60 bg-slate-200 overflow-hidden relative">
+                <img
+                  src={BLOG_IMAGES[post.slug] || '/images/concrete-100.jpeg'}
+                  alt={post.title}
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-8 flex-grow">
+                <p class="text-xs font-bold text-slate-400 mb-3 uppercase tracking-widest">{post.date} &bull; By {post.author}</p>
+                <h2 class="text-2xl font-black text-brand-dark mb-4 leading-tight group-hover:text-brand-primary transition-colors">
+                  <a href={`/blog/${post.slug}`}>{post.title}</a>
+                </h2>
+                <p class="text-slate-600 font-medium mb-6 line-clamp-3">{post.excerpt}</p>
+                <a href={`/blog/${post.slug}`} class="inline-flex items-center gap-2 text-brand-primary font-black uppercase tracking-widest text-sm">
+                  Read Article <span>&rarr;</span>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-20">
+          <h3 class="text-2xl font-black text-slate-400">No posts found in this category yet.</h3>
+          <a href="/blog" class="text-brand-primary font-black uppercase tracking-widest text-sm mt-8 inline-block">View All Posts</a>
+        </div>
+      )}
+    </div>
+  </div>
+</BaseLayout>

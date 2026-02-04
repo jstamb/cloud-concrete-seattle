@@ -2,19 +2,19 @@
   "name": "cloud-concrete-of-seattle",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "dependencies": {
-    "next": "^15.1.0",
+    "astro": "^5.1.0",
+    "@astrojs/react": "^4.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "tailwindcss": "^4.0.0",

@@ -1,0 +1,117 @@
+---
+import Header from '@/components/Header';
+import Footer from '@/components/Footer.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import StickyCTA from '@/components/StickyCTA.astro';
+import JsonLd from '@/components/JsonLd.astro';
+import { BUSINESS_NAME, DOMAIN } from '@/lib/constants';
+import '@/styles/globals.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+}
+
+const {
+  title = `${BUSINESS_NAME} | Premier Concrete Contractors`,
+  description = "Seattle's trusted concrete contractor. Driveways, patios, foundations, stamped concrete & more. Licensed, bonded & insured. Free estimates. Call (206) 495-0997.",
+  ogImage = '/images/CloudConcreteofSeattle.jpeg',
+  noIndex = false,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, DOMAIN);
+const fullOgImage = ogImage.startsWith('http') ? ogImage : `${DOMAIN}${ogImage}`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="concrete contractor Seattle, concrete driveway Seattle, stamped concrete Seattle, concrete patio Seattle, foundation contractor Seattle" />
+    <link rel="canonical" href={canonicalURL} />
+
+    {noIndex && <meta name="robots" content="noindex, nofollow" />}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullOgImage} />
+    <meta property="og:site_name" content={BUSINESS_NAME} />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullOgImage} />
+
+    <!-- Geo -->
+    <meta name="geo.region" content="US-WA" />
+    <meta name="geo.placename" content="Seattle" />
+    <meta name="geo.position" content="47.613042;-122.3420644" />
+    <meta name="ICBM" content="47.613042, -122.3420644" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Lexend:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Rybbit Analytics -->
+    <script src="https://app.rybbit.io/api/script.js" data-site-id="5b7460f0c557" defer></script>
+
+    <JsonLd />
+  </head>
+  <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+    <!-- Noscript fallback for SEO crawlers -->
+    <noscript>
+      <div style="padding: 40px; max-width: 800px; margin: 0 auto; font-family: system-ui, sans-serif;">
+        <h1>Cloud Concrete of Seattle - Professional Concrete Contractor</h1>
+        <p>Seattle's trusted concrete contractor specializing in driveways, patios, foundations, stamped concrete, and decorative concrete. Licensed, bonded, and insured with a 10-year warranty on all structural work.</p>
+
+        <h2>Our Concrete Services</h2>
+        <ul>
+          <li><a href="/services/concrete-driveways">Concrete Driveways</a> - Custom-built driveways for Seattle homes</li>
+          <li><a href="/services/stamped-concrete">Stamped Concrete</a> - Decorative concrete with stone and wood patterns</li>
+          <li><a href="/services/concrete-patios">Concrete Patios</a> - Outdoor living spaces built to last</li>
+          <li><a href="/services/concrete-foundations">Concrete Foundations</a> - Structural foundation services</li>
+          <li><a href="/services/concrete-retaining-walls">Retaining Walls</a> - Engineered slope stabilization</li>
+          <li><a href="/services/exposed-aggregate">Exposed Aggregate</a> - Slip-resistant decorative finishes</li>
+        </ul>
+
+        <h2>Service Areas</h2>
+        <p>Serving Seattle neighborhoods including Ballard, Capitol Hill, Queen Anne, West Seattle, Fremont, and all surrounding areas including Bellevue, Kirkland, Redmond, and Renton.</p>
+
+        <nav>
+          <a href="/">Home</a> |
+          <a href="/about">About Us</a> |
+          <a href="/services">Services</a> |
+          <a href="/locations">Service Areas</a> |
+          <a href="/blog">Blog</a> |
+          <a href="/contact">Contact</a>
+        </nav>
+
+        <p><strong>Contact Us:</strong> Call (206) 495-0997 for a free estimate</p>
+        <p>Cloud Concrete of Seattle - Licensed and Insured Concrete Contractors</p>
+      </div>
+    </noscript>
+
+    <div class="flex flex-col min-h-screen">
+      <Header client:load />
+      <Breadcrumbs />
+      <main class="flex-grow">
+        <slot />
+      </main>
+      <StickyCTA />
+      <Footer />
+    </div>
+  </body>
+</html>

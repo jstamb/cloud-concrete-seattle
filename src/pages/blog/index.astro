@@ -1,0 +1,87 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema.astro';
+import { BLOG_POSTS, BLOG_IMAGES } from '@/lib/constants';
+
+const title = 'Concrete Insights & Advice | Seattle Concrete Blog';
+const description = "Expert tips, design inspiration, and local Seattle guides for your next concrete project. Learn from Seattle's leading concrete contractors.";
+
+// Extract unique categories
+const categories = Array.from(new Set(BLOG_POSTS.map(p => p.category)));
+---
+
+<BaseLayout title={title} description={description}>
+  <BreadcrumbSchema items={[{ name: 'Blog', url: '/blog' }]} />
+
+  <div class="pb-32">
+    <div class="bg-brand-dark py-24 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-5xl md:text-7xl font-black mb-6">Concrete Insights <br/><span class="text-brand-secondary italic">& Advice</span></h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto font-medium">Expert tips, design inspiration, and local Seattle guides for your next concrete project.</p>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 mt-20">
+      <div class="flex flex-col lg:flex-row gap-16">
+        <div class="lg:w-3/4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {BLOG_POSTS.map(post => (
+              <article class="group bg-white rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all border border-slate-100 flex flex-col">
+                <div class="h-60 bg-slate-200 overflow-hidden relative">
+                  <div class="absolute top-4 left-4 bg-brand-primary text-brand-secondary px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest z-10">
+                    {post.category}
+                  </div>
+                  <img
+                    src={BLOG_IMAGES[post.slug] || '/images/concrete-100.jpeg'}
+                    alt={post.title}
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div class="p-8 flex-grow">
+                  <p class="text-[10px] font-bold text-slate-400 mb-3 uppercase tracking-widest">{post.date} &bull; By {post.author}</p>
+                  <h2 class="text-2xl font-black text-brand-dark mb-4 leading-tight group-hover:text-brand-primary transition-colors">
+                    <a href={`/blog/${post.slug}`}>{post.title}</a>
+                  </h2>
+                  <p class="text-slate-600 font-medium mb-6 line-clamp-3 text-sm">{post.excerpt}</p>
+                  <a href={`/blog/${post.slug}`} class="inline-flex items-center gap-2 text-brand-primary font-black uppercase tracking-widest text-xs">
+                    Read Full Guide <span>&rarr;</span>
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <aside class="lg:w-1/4 space-y-12">
+          <div class="bg-slate-900 p-10 rounded-[2.5rem] text-white">
+            <h4 class="text-lg font-black mb-6 uppercase tracking-widest text-brand-secondary">Categories</h4>
+            <ul class="space-y-4">
+              {categories.map(cat => (
+                <li>
+                  <a
+                    href={`/blog/category/${cat.toLowerCase().replace(/ /g, '-')}`}
+                    class="text-slate-400 hover:text-white font-bold flex items-center justify-between text-sm group"
+                  >
+                    {cat}
+                    <span class="text-brand-primary group-hover:translate-x-1 transition-transform">&rarr;</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="bg-brand-primary p-10 rounded-[2.5rem] text-white">
+            <h4 class="text-xl font-black mb-4 leading-tight">Need a Project Quote?</h4>
+            <p class="text-white/80 text-sm font-medium mb-8">Our estimators are currently serving Ballard, Fremont, and Queen Anne today.</p>
+            <a
+              href="/contact"
+              class="block text-center bg-brand-dark text-white py-4 rounded-xl font-black text-xs uppercase tracking-widest hover:scale-105 transition-all"
+            >
+              Book Inspection
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

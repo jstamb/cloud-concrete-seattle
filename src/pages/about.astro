@@ -1,0 +1,93 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Gallery from '@/components/Gallery';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema.astro';
+
+const title = 'About Our Seattle Concrete Company';
+const description = "Learn about Cloud Concrete of Seattle, our history, our commitment to quality, and why we are the preferred choice for concrete work in the Pacific Northwest.";
+---
+
+<BaseLayout title={title} description={description}>
+  <BreadcrumbSchema items={[{ name: 'About', url: '/about' }]} />
+
+  <div class="pb-32">
+    <div class="bg-brand-dark py-24 text-white relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <img
+          src="/images/concrete-45.jpeg"
+          alt="Concrete Crew"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="container mx-auto px-4 relative z-10 text-center">
+        <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tight">Our <span class="text-brand-secondary italic tracking-normal">Mission</span></h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto font-medium">Seattle's premier concrete artisans, combining structural engineering with aesthetic perfection.</p>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-24">
+      <div class="flex flex-col lg:flex-row items-center gap-20 mb-32">
+        <div class="lg:w-1/2">
+          <h2 class="text-4xl font-black text-brand-dark mb-8 tracking-tight uppercase">Building Seattle's Future</h2>
+          <div class="w-20 h-1.5 bg-brand-primary mb-10"></div>
+          <div class="space-y-6 text-slate-600 font-medium leading-relaxed text-lg">
+            <p>Founded in the heart of Seattle, Cloud Concrete began with a simple mission: to provide homeowners and businesses with concrete solutions that actually last in the unique Pacific Northwest climate.</p>
+            <p>We realized that many contractors were applying "standard" methods that didn't account for Seattle's persistent moisture, varied soil conditions, and freeze-thaw cycles. We decided to be different.</p>
+            <p>Today, Cloud Concrete of Seattle is recognized as the regional leader in precision flatwork and structural concrete. Our crews are composed of local experts who understand the chemistry of curing in our humidity and the engineering required for our hillsides. Every project we undertake is an opportunity to contribute to the architectural legacy of our city.</p>
+          </div>
+        </div>
+        <div class="lg:w-1/2">
+          <div class="relative">
+            <img
+              src="/images/concrete-52.jpeg"
+              alt="Concrete Finish"
+              width="600"
+              height="400"
+              class="rounded-[3rem] shadow-2xl relative z-10 border-8 border-white"
+            />
+            <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-brand-primary rounded-full z-0 opacity-20 blur-3xl"></div>
+            <div class="absolute -top-10 -left-10 w-48 h-48 bg-brand-secondary rounded-full z-0 opacity-20 blur-3xl"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-32">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-black text-brand-dark mb-4 uppercase tracking-tight">Our Core Values</h2>
+          <p class="text-slate-500 font-medium">The principles that guide every pour we make.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { title: "Integrity", desc: "We never cut corners on subgrade preparation or reinforcement.", color: "bg-brand-primary" },
+            { title: "Precision", desc: "Laser-leveled finishes and exact slope management for perfect drainage.", color: "bg-brand-secondary" },
+            { title: "Innovation", desc: "Using advanced PNW-specific admixtures for maximum durability.", color: "bg-brand-dark" },
+            { title: "Community", desc: "Supporting local Seattle districts through quality infrastructure.", color: "bg-slate-400" }
+          ].map((val) => (
+            <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
+              <div class={`w-10 h-10 ${val.color} rounded-lg mb-6 group-hover:scale-110 transition-transform`}></div>
+              <h3 class="text-xl font-black mb-4 uppercase tracking-tight">{val.title}</h3>
+              <p class="text-slate-500 text-sm font-medium leading-relaxed">{val.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="bg-slate-50 p-16 rounded-[4rem] border border-slate-100 mb-32 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/5 rounded-full -mr-32 -mt-32"></div>
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-black text-brand-dark mb-8 uppercase tracking-tight leading-tight">Committed to Sustainable <br/><span class="text-brand-primary italic tracking-normal">Seattle Construction</span></h2>
+          <p class="text-slate-600 font-medium text-lg leading-relaxed mb-10">
+            As a local Seattle business, we are deeply committed to reducing our environmental impact. We utilize low-carbon concrete mixes, prioritize recycled aggregates, and specialize in pervious concrete solutions that help manage our city's stormwater runoff naturally. Our goal is to build long-lasting structures that serve the community while respecting the natural beauty of the Pacific Northwest.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <div class="bg-white px-6 py-3 rounded-full border border-slate-200 text-[10px] font-black uppercase tracking-widest text-slate-500 shadow-sm">Pervious Expert</div>
+            <div class="bg-white px-6 py-3 rounded-full border border-slate-200 text-[10px] font-black uppercase tracking-widest text-slate-500 shadow-sm">Eco-Conscious Curing</div>
+            <div class="bg-white px-6 py-3 rounded-full border border-slate-200 text-[10px] font-black uppercase tracking-widest text-slate-500 shadow-sm">Recycled Aggregate Prep</div>
+          </div>
+        </div>
+      </div>
+
+      <Gallery client:visible />
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,65 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema.astro';
+import { NEIGHBORHOODS } from '@/lib/constants';
+
+const title = 'Concrete Contractor Near Me | Seattle Neighborhoods Served';
+const description = "Find a concrete contractor near you in Seattle. We serve Ballard, Queen Anne, Capitol Hill, West Seattle & all neighborhoods. Licensed, bonded & insured. Call (206) 495-0997.";
+
+const coreSeattle = NEIGHBORHOODS.filter(n => parseInt(n.zip) >= 98101 && parseInt(n.zip) <= 98199);
+const greaterSeattle = NEIGHBORHOODS.filter(n => parseInt(n.zip) < 98101 || parseInt(n.zip) > 98199);
+---
+
+<BaseLayout title={title} description={description}>
+  <BreadcrumbSchema items={[{ name: 'Locations', url: '/locations' }]} />
+
+  <div class="pb-32">
+    <div class="bg-brand-dark py-24 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tight">Concrete Contractor <br/><span class="text-brand-secondary italic">Near You</span></h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto font-medium">Your local Seattle concrete contractor. Find your neighborhood below for service details and free estimates.</p>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-24">
+      <div class="mb-24">
+        <h2 class="text-4xl font-black text-brand-dark mb-12 text-center tracking-tight uppercase">Concrete Contractor by Seattle Neighborhood</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {coreSeattle.map(n => (
+            <a
+              href={`/locations/${n.slug}`}
+              class="p-6 bg-white border border-slate-100 rounded-2xl text-center hover:shadow-xl hover:border-brand-primary/20 transition-all group"
+            >
+              <span class="font-black text-slate-800 text-sm uppercase tracking-wider group-hover:text-brand-primary transition-colors block">{n.name}</span>
+              <div class="text-[10px] text-slate-400 font-bold mt-1 group-hover:text-brand-primary/50 uppercase tracking-widest">{n.zip}</div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="mb-24">
+        <h2 class="text-4xl font-black text-brand-dark mb-12 text-center tracking-tight uppercase">Greater Seattle Areas</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {greaterSeattle.map(n => (
+            <a
+              href={`/locations/${n.slug}`}
+              class="p-6 bg-white border border-slate-100 rounded-2xl text-center hover:shadow-xl hover:border-brand-primary/20 transition-all group"
+            >
+              <span class="font-black text-slate-800 text-sm uppercase tracking-wider group-hover:text-brand-primary transition-colors block">{n.name}</span>
+              <div class="text-[10px] text-slate-400 font-bold mt-1 group-hover:text-brand-primary/50 uppercase tracking-widest">{n.zip || 'WA'}</div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="bg-slate-900 rounded-[3rem] p-16 text-white text-center relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full -mr-32 -mt-32"></div>
+        <h3 class="text-3xl font-black mb-6 relative z-10 uppercase tracking-tight">Need Service Elsewhere?</h3>
+        <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10 font-medium relative z-10">We frequently handle projects beyond these core areas for larger structural and commercial builds. Contact us today to see if your property is within our extended service range.</p>
+        <a href="/contact" class="bg-brand-primary text-white px-10 py-5 rounded-xl font-black text-sm uppercase tracking-widest inline-block shadow-2xl hover:scale-105 transition-all relative z-10">
+          Check Service Availability
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

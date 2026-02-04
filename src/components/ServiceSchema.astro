@@ -1,0 +1,27 @@
+---
+import { BUSINESS_NAME } from '@/lib/constants';
+
+interface Props {
+  serviceName: string;
+  description: string;
+}
+
+const { serviceName, description } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": serviceName,
+  "description": description,
+  "provider": {
+    "@type": "ConcreteContractor",
+    "name": BUSINESS_NAME
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Seattle"
+  }
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

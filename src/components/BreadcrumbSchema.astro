@@ -1,0 +1,30 @@
+---
+import { DOMAIN } from '@/lib/constants';
+
+interface Props {
+  items: { name: string; url: string }[];
+}
+
+const { items } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": DOMAIN
+    },
+    ...items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 2,
+      "name": item.name,
+      "item": `${DOMAIN}${item.url}`
+    }))
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

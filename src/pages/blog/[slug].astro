@@ -1,0 +1,102 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import LeadForm from '@/components/LeadForm';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema.astro';
+import ArticleSchema from '@/components/ArticleSchema.astro';
+import { BLOG_POSTS, BLOG_IMAGES, PHONE_NUMBER, DOMAIN } from '@/lib/constants';
+
+export function getStaticPaths() {
+  return BLOG_POSTS.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+const imageUrl = BLOG_IMAGES[post.slug] || '/images/concrete-100.jpeg';
+
+const title = post.title;
+const description = post.excerpt;
+---
+
+<BaseLayout title={title} description={description} ogImage={imageUrl}>
+  <BreadcrumbSchema items={[
+    { name: 'Blog', url: '/blog' },
+    { name: post.title, url: `/blog/${post.slug}` },
+  ]} />
+  <ArticleSchema
+    title={post.title}
+    excerpt={post.excerpt}
+    imageUrl={`${DOMAIN}${imageUrl}`}
+    datePublished="2024-01-01"
+  />
+
+  <div class="pb-32">
+    <div class="container mx-auto px-4 py-16">
+      <div class="max-w-6xl mx-auto">
+        <a href="/blog" class="text-brand-primary font-black uppercase tracking-widest text-sm mb-8 inline-block hover:gap-4 transition-all">
+          &larr; Back to Blog
+        </a>
+        <div class="mb-10">
+          <span class="bg-brand-primary/10 text-brand-primary px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-6 inline-block">
+            {post.category}
+          </span>
+          <h1 class="text-4xl md:text-6xl font-black text-brand-dark mb-6 leading-tight">
+            {post.title}
+          </h1>
+          <div class="flex items-center gap-4 text-slate-500 font-bold uppercase tracking-widest text-xs">
+            <span>{post.date}</span>
+            <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+            <span>By {post.author}</span>
+          </div>
+        </div>
+
+        <div class="relative h-[400px] w-full rounded-[3rem] mb-16 shadow-2xl overflow-hidden">
+          <img
+            src={imageUrl}
+            alt={post.title}
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-16">
+          <div class="lg:w-2/3">
+            <div class="prose prose-slate prose-xl max-w-none">
+              <p class="text-xl font-bold text-slate-700 mb-8 leading-relaxed italic border-l-8 border-brand-primary pl-6">
+                {post.excerpt}
+              </p>
+              <div
+                class="font-medium text-slate-600 leading-relaxed space-y-6 [&_a]:text-brand-primary [&_a]:font-bold [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-brand-dark [&_p]:mb-4"
+                set:html={post.content}
+              />
+            </div>
+
+            <div class="mt-16 p-10 bg-brand-dark rounded-[3rem] text-white">
+              <h3 class="text-3xl font-black mb-4">Ready to Start Your Project?</h3>
+              <p class="text-slate-400 mb-8 font-medium">Get a professional consultation and quote from Seattle's concrete experts.</p>
+              <a href={`tel:${PHONE_NUMBER}`} class="bg-brand-primary text-white px-8 py-4 rounded-xl font-black inline-block shadow-xl hover:brightness-110 transition-all uppercase tracking-widest">
+                Call {PHONE_NUMBER}
+              </a>
+            </div>
+          </div>
+          <div class="lg:w-1/3">
+            <div class="sticky top-32 space-y-8">
+              <LeadForm client:load pathname={Astro.url.pathname} />
+              <div class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100">
+                <h4 class="text-lg font-black mb-4 uppercase tracking-widest text-brand-dark">Related Posts</h4>
+                <div class="space-y-4">
+                  {BLOG_POSTS.filter(p => p.slug !== post.slug).slice(0, 3).map(p => (
+                    <a href={`/blog/${p.slug}`} class="block group">
+                      <h5 class="font-bold text-slate-800 group-hover:text-brand-primary transition-colors line-clamp-2 leading-snug">{p.title}</h5>
+                      <p class="text-xs text-slate-400 font-bold uppercase mt-1 tracking-widest">{p.date}</p>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

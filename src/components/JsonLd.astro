@@ -1,0 +1,111 @@
+---
+import { DOMAIN, BUSINESS_NAME, PHONE_NUMBER } from '@/lib/constants';
+
+interface Props {
+  type?: 'LocalBusiness' | 'BreadcrumbList' | 'FAQPage' | 'Service' | 'Article';
+  data?: Record<string, unknown>;
+}
+
+const { type = 'LocalBusiness', data } = Astro.props;
+
+// LocalBusiness schema (default)
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "ConcreteContractor",
+  "name": BUSINESS_NAME,
+  "description": "Seattle's trusted concrete contractor specializing in driveways, patios, foundations, stamped concrete, and decorative concrete. Licensed, bonded, and insured with a 10-year warranty.",
+  "image": `${DOMAIN}/images/CloudConcreteofSeattle.jpeg`,
+  "url": DOMAIN,
+  "telephone": PHONE_NUMBER,
+  "priceRange": "$$-$$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Seattle",
+    "addressRegion": "WA",
+    "postalCode": "98101",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.613042,
+    "longitude": -122.3420644
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "16:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Seattle",
+      "sameAs": "https://en.wikipedia.org/wiki/Seattle"
+    },
+    { "@type": "City", "name": "Bellevue" },
+    { "@type": "City", "name": "Kirkland" },
+    { "@type": "City", "name": "Redmond" },
+    { "@type": "City", "name": "Renton" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Concrete Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Concrete Driveways",
+          "description": "Custom-built concrete driveways designed to withstand Seattle's unique weather patterns."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Stamped Concrete",
+          "description": "High-end decorative stamped concrete patios, driveways, and walkways."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Concrete Foundations",
+          "description": "Professional foundation services for homes and additions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Concrete Patios",
+          "description": "Custom outdoor living spaces with various finish options."
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "47",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.google.com/maps/place/Cloud+Concrete+of+Seattle"
+  ]
+};
+
+const schema = type === 'LocalBusiness' ? localBusinessSchema : data;
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

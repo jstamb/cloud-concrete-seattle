@@ -1,0 +1,35 @@
+---
+import { DOMAIN, BUSINESS_NAME } from '@/lib/constants';
+
+interface Props {
+  title: string;
+  excerpt: string;
+  imageUrl: string;
+  datePublished: string;
+}
+
+const { title, excerpt, imageUrl, datePublished } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": excerpt,
+  "image": imageUrl,
+  "datePublished": datePublished,
+  "author": {
+    "@type": "Organization",
+    "name": BUSINESS_NAME
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": BUSINESS_NAME,
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${DOMAIN}/images/logo.png`
+    }
+  }
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
