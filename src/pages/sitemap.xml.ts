@@ -40,7 +40,7 @@ export const GET: APIRoute = async () => {
   // Blog categories
   const categories = Array.from(new Set(BLOG_POSTS.map(p => p.category)));
   const categoryPages = categories.map((category) => ({
-    url: `${baseUrl}/blog/category/${category.toLowerCase().replace(/ /g, '-')}`,
+    url: `${baseUrl}/blog/category/${category.toLowerCase().replace(/&/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')}`,
     priority: '0.5',
     changefreq: 'weekly'
   }));
@@ -59,10 +59,13 @@ export const GET: APIRoute = async () => {
 
   const allPages = [...staticPages, ...servicePages, ...locationPages, ...blogPages, ...categoryPages, ...combinedPages];
 
+  // Escape ampersands for XML
+  const escapeXml = (str: string) => str.replace(/&/g, '&amp;');
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${allPages.map(page => `  <url>
-    <loc>${page.url}</loc>
+    <loc>${escapeXml(page.url)}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
