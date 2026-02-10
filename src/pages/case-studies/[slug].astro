@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const caseStudies = await getCollection('case-studies');
+  return caseStudies.map((study) => ({
+    params: { slug: study.slug },
+    props: { study },
+  }));
+}
+
+const { study } = Astro.props;
+const { Content } = await study.render();
+---
+
+<Layout 
+  title={`${study.data.title} | Cloud Concrete of Seattle`}
+  description={study.data.description}
+>
+  <article class="container mx-auto px-4 py-16 max-w-3xl">
+    <nav class="mb-8">
+      <a href="/case-studies" class="text-brand-primary hover:underline text-sm font-bold uppercase tracking-widest">
+        ← Back to Case Studies
+      </a>
+    </nav>
+    
+    <h1 class="text-4xl font-black text-brand-dark mb-4">{study.data.title}</h1>
+    <p class="text-xl text-slate-600 mb-8">{study.data.description}</p>
+    
+    <div class="prose prose-lg max-w-none prose-headings:text-brand-dark prose-a:text-brand-primary">
+      <Content />
+    </div>
+    
+    <div class="mt-12 p-8 bg-brand-dark rounded-xl text-center">
+      <h3 class="text-2xl font-bold text-white mb-4">Ready for Your Project?</h3>
+      <p class="text-slate-300 mb-6">Get a free estimate for your concrete project in Seattle.</p>
+      <a href="/contact" class="inline-block bg-brand-primary text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest hover:brightness-110 transition-all">
+        Get Free Estimate
+      </a>
+    </div>
+  </article>
+</Layout>
