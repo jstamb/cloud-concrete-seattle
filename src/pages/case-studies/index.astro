@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const caseStudies = await getCollection('case-studies');
+---
+
+<Layout 
+  title="Case Studies | Cloud Concrete of Seattle"
+  description="See real results from our concrete projects across Seattle. Case studies featuring driveways, patios, foundations, and more."
+>
+  <div class="container mx-auto px-4 py-16">
+    <h1 class="text-4xl font-black text-brand-dark mb-4">Case Studies</h1>
+    <p class="text-xl text-slate-600 mb-12 max-w-2xl">
+      Real projects, real results. See how we deliver exceptional concrete work for Seattle homeowners and businesses.
+    </p>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {caseStudies.map((study) => (
+        <a href={`/case-studies/${study.slug}`} class="group">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all">
+            <div class="h-48 bg-slate-200"></div>
+            <div class="p-6">
+              <h2 class="text-xl font-bold text-brand-dark group-hover:text-brand-primary transition-colors mb-2">
+                {study.data.title}
+              </h2>
+              <p class="text-slate-600 text-sm line-clamp-2">
+                {study.data.description}
+              </p>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>
