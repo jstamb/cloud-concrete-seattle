@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cloudconcreteseattle.com/sitemap.xml
+# Block parameter URLs to conserve crawl budget
+Disallow: /*?*
 
-Crawl-delay: 1
+# Block internal search results
+Disallow: /search
+
+Sitemap: https://cloudconcreteseattle.com/sitemap-index.xml
