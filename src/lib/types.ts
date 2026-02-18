@@ -1,3 +1,39 @@
+export interface ServiceBenefit {
+  title: string;
+  description: string;
+}
+
+export interface ServiceProcessStep {
+  step: string;
+  title: string;
+  description: string;
+}
+
+export interface ServiceCaseStudy {
+  title: string;
+  neighborhood: string;
+  projectType: string;
+  challenge: string;
+  solution: string;
+  result: string;
+}
+
+export interface ServiceFAQ {
+  question: string;
+  answer: string;
+}
+
+export interface ServiceContent {
+  benefits: ServiceBenefit[];
+  processSteps: ServiceProcessStep[];
+  caseStudy: ServiceCaseStudy;
+  faqs: ServiceFAQ[];
+  localContext: string;
+  maintenanceTips: string[];
+  whyChooseUs: string;
+  relatedServices: string[];
+}
+
 export interface Service {
   name: string;
   slug: string;
@@ -6,6 +42,7 @@ export interface Service {
   shortDescription: string;
   longDescription: string;
   priceIndicator: string;
+  content?: ServiceContent;
 }
 
 export interface Neighborhood {
