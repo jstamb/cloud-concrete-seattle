@@ -11,7 +11,7 @@ const { type = 'LocalBusiness', data } = Astro.props;
 // LocalBusiness schema (default)
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "ConcreteContractor",
+  "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
   "name": BUSINESS_NAME,
   "description": "Seattle's trusted concrete contractor specializing in driveways, patios, foundations, stamped concrete, and decorative concrete. Licensed, bonded, and insured with a 10-year warranty.",
   "image": `${DOMAIN}/images/CloudConcreteofSeattle.jpeg`,
