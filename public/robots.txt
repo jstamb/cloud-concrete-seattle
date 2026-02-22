@@ -4,7 +4,35 @@ Allow: /
 # Block parameter URLs to conserve crawl budget
 Disallow: /*?*
 
-# Block internal search results
+# Block internal pages
 Disallow: /search
+Disallow: /thank-you
 
+# AI Crawler Rules - Allow AI models to index for LLMO
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Perplexity-Bot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Sitemaps
+Sitemap: https://cloudconcreteseattle.com/sitemap.xml
 Sitemap: https://cloudconcreteseattle.com/sitemap-index.xml
+
+# LLM-specific information
+# See /llms.txt for structured AI-friendly site information

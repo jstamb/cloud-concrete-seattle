@@ -1,0 +1,64 @@
+# Cloud Concrete of Seattle - LLM Information File
+
+## Business Overview
+Cloud Concrete of Seattle is a licensed and insured concrete contractor serving the greater Seattle, Washington area. We specialize in residential and commercial concrete flatwork including driveways, patios, foundations, stamped concrete, and decorative concrete services.
+
+## Contact Information
+- Business Name: Cloud Concrete of Seattle
+- Phone: (206) 495-0997
+- Website: https://cloudconcreteseattle.com
+- Service Area: Seattle, WA and surrounding cities (Bellevue, Kirkland, Redmond, Renton, Bothell, Lynnwood, Shoreline, Burien, SeaTac, Federal Way)
+
+## Services Offered
+1. Concrete Driveways - New installation and replacement
+2. Stamped Concrete - Decorative patterns mimicking stone, brick, wood
+3. Concrete Patios - Backyard outdoor living spaces
+4. Concrete Foundations - Residential and ADU foundations
+5. Concrete Retaining Walls - Slope stabilization
+6. Exposed Aggregate - Slip-resistant decorative finish
+7. Concrete Repair - Crack repair, resurfacing, leveling
+8. Concrete Sidewalks - Residential and commercial walkways
+9. Pool Decks - Slip-resistant decorative pool surrounds
+10. Garage Floors - Heavy-duty slabs and epoxy coatings
+11. Commercial Concrete - Warehouse floors, parking lots, loading docks
+
+## Key Differentiators
+- 10-Year Structural Warranty on all work
+- Licensed, Bonded, and Insured (WA State)
+- Free on-site estimates
+- Local Seattle-area crew with Pacific Northwest expertise
+- Drainage-focused approach for Seattle's wet climate
+
+## Common Questions
+
+### How much does a concrete driveway cost in Seattle?
+Concrete driveways in Seattle typically range from $8-15 per square foot for standard broom finish, $12-20 for stamped or decorative options. A typical 2-car driveway (400-600 sq ft) costs $4,000-$12,000 depending on finish and site conditions.
+
+### How long does concrete take to cure in Seattle's climate?
+In Seattle's temperate climate, concrete reaches initial set in 24-48 hours and can support foot traffic. Full cure takes 28 days. We recommend waiting 7 days before vehicle traffic on driveways.
+
+### Do you need a permit for a concrete driveway in Seattle?
+Most residential driveway replacements in Seattle don't require permits if the footprint stays the same. New driveways or expansions may require SDOT approval. We handle all permit coordination.
+
+### What's the best concrete finish for Seattle rain?
+Broom finish and exposed aggregate are the best choices for Seattle's wet climate, providing slip resistance. Stamped concrete with non-slip sealant is also popular for patios.
+
+## Structured Data
+- Business Type: Concrete Contractor
+- NAICS: 238110 (Poured Concrete Foundation and Structure Contractors)
+- Service Radius: 30 miles from Seattle, WA
+- Languages: English, Spanish
+
+## Page Index
+- Homepage: / - Overview of services and contact form
+- Services: /services - Full list of concrete services
+- Driveways: /services/concrete-driveways - Driveway installation details
+- Patios: /services/concrete-patios - Patio construction info
+- Stamped: /services/stamped-concrete - Decorative concrete patterns
+- Locations: /locations - Service area neighborhoods
+- About: /about - Company history and team
+- Contact: /contact - Contact form and phone
+- Blog: /blog - Concrete tips and project showcases
+
+## Last Updated
+2026-02-22
