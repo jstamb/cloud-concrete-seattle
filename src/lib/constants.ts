@@ -2,7 +2,7 @@ import type { Service, Neighborhood, Testimonial, BlogPost, FAQ } from './types'
 
 export const PHONE_NUMBER = "(206) 495-0997";
 export const BUSINESS_NAME = "Cloud Concrete of Seattle";
-export const DOMAIN = "https://cloudconcreteseattle.com";
+export const DOMAIN = "https://www.cloudconcreteseattle.com";
 
 export const SERVICES: Service[] = [
   {
