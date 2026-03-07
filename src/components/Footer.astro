@@ -1,5 +1,5 @@
 ---
-import { PHONE_NUMBER, BUSINESS_NAME, SERVICES, NEIGHBORHOODS } from '@/lib/constants';
+import { PHONE_NUMBER, BUSINESS_NAME, BUSINESS_ADDRESS, SERVICES, NEIGHBORHOODS } from '@/lib/constants';
 
 const northSeattle = NEIGHBORHOODS.filter(n =>
   ["Ballard", "Fremont", "Queen Anne", "Magnolia", "Wallingford", "Green Lake", "Greenwood", "Phinney Ridge"].includes(n.name)
@@ -101,6 +101,7 @@ const currentYear = new Date().getFullYear();
           <p class="text-[10px] font-black uppercase tracking-widest text-brand-secondary mb-3">Call Our Team</p>
           <a href={`tel:${PHONE_NUMBER}`} class="text-xl font-black text-white hover:text-brand-secondary transition-colors">{PHONE_NUMBER}</a>
           <p class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-2">Mon-Sat: 7am - 6pm</p>
+          <p class="text-[10px] text-slate-400 font-bold mt-4">{BUSINESS_ADDRESS}</p>
         </div>
       </div>
     </div>

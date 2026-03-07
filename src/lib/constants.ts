@@ -3,6 +3,7 @@ import type { Service, Neighborhood, Testimonial, BlogPost, FAQ } from './types'
 export const PHONE_NUMBER = "(206) 495-0997";
 export const BUSINESS_NAME = "Cloud Concrete of Seattle";
 export const DOMAIN = "https://www.cloudconcreteseattle.com";
+export const BUSINESS_ADDRESS = "823 Madison St. Unit 416, Seattle, WA 98104";
 
 export const SERVICES: Service[] = [
   {
