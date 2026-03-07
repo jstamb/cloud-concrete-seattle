@@ -40,17 +40,17 @@ const currentYear = new Date().getFullYear();
 
         <!-- South Seattle nested below brand for unique layout -->
         <div class="pt-8">
-          <h4 class="text-white font-black mb-6 uppercase tracking-widest text-[10px]">South Seattle</h4>
+          <h4 class="text-white font-black mb-6 uppercase tracking-widest text-xs">South Seattle</h4>
           <ul class="space-y-3">
             {southSeattle.map(n => (
               <li>
-                <a href={`/locations/${n.slug}`} class="text-[11px] font-bold uppercase tracking-widest hover:text-brand-secondary transition-colors block">
+                <a href={`/locations/${n.slug}`} class="text-sm font-bold uppercase tracking-widest hover:text-brand-secondary transition-colors block">
                   {n.name}, WA
                 </a>
               </li>
             ))}
             <li class="pt-2">
-              <a href="/locations" class="text-[11px] font-black uppercase tracking-widest text-brand-secondary flex items-center gap-2 hover:gap-3 transition-all">
+              <a href="/locations" class="text-sm font-black uppercase tracking-widest text-brand-secondary flex items-center gap-2 hover:gap-3 transition-all">
                 All Seattle Districts &rarr;
               </a>
             </li>
@@ -60,11 +60,11 @@ const currentYear = new Date().getFullYear();
 
       <!-- Core Services Column -->
       <div>
-        <h4 class="text-white font-black mb-8 uppercase tracking-widest text-[10px]">Core Services</h4>
+        <h4 class="text-white font-black mb-8 uppercase tracking-widest text-xs">Core Services</h4>
         <ul class="space-y-3">
           {SERVICES.map(s => (
             <li>
-              <a href={`/services/${s.slug}`} class="text-[11px] font-bold uppercase tracking-widest hover:text-brand-secondary transition-colors block">
+              <a href={`/services/${s.slug}`} class="text-sm font-bold uppercase tracking-widest hover:text-brand-secondary transition-colors block">
                 {s.name}
               </a>
             </li>
@@ -74,11 +74,11 @@ const currentYear = new Date().getFullYear();
 
       <!-- North Seattle Column -->
       <div>
-        <h4 class="text-white font-black mb-8 uppercase tracking-widest text-[10px]">North Seattle</h4>
+        <h4 class="text-white font-black mb-8 uppercase tracking-widest text-xs">North Seattle</h4>
         <ul class="space-y-3">
           {northSeattle.map(n => (
             <li>
-              <a href={`/locations/${n.slug}`} class="text-[11px] font-bold uppercase tracking-widest hover:text-brand-secondary transition-colors block">
+              <a href={`/locations/${n.slug}`} class="text-sm font-bold uppercase tracking-widest hover:text-brand-secondary transition-colors block">
                 {n.name}, WA
               </a>
             </li>
@@ -89,29 +89,29 @@ const currentYear = new Date().getFullYear();
       <!-- Contact / Quick Links Column -->
       <div class="space-y-12">
         <div>
-          <h4 class="text-white font-black mb-8 uppercase tracking-widest text-[10px]">Quick Links</h4>
+          <h4 class="text-white font-black mb-8 uppercase tracking-widest text-xs">Quick Links</h4>
           <ul class="space-y-3">
-            <li><a href="/about" class="text-[11px] font-bold uppercase tracking-widest hover:text-brand-secondary transition-colors">About Us</a></li>
-            <li><a href="/blog" class="text-[11px] font-bold uppercase tracking-widest hover:text-brand-secondary transition-colors">Latest News</a></li>
-            <li><a href="/contact" class="text-[11px] font-bold uppercase tracking-widest hover:text-brand-secondary transition-colors">Contact</a></li>
-            <li><a href="/privacy" class="text-[11px] font-bold uppercase tracking-widest hover:text-brand-secondary transition-colors">Privacy</a></li>
+            <li><a href="/about" class="text-sm font-bold uppercase tracking-widest hover:text-brand-secondary transition-colors">About Us</a></li>
+            <li><a href="/blog" class="text-sm font-bold uppercase tracking-widest hover:text-brand-secondary transition-colors">Latest News</a></li>
+            <li><a href="/contact" class="text-sm font-bold uppercase tracking-widest hover:text-brand-secondary transition-colors">Contact</a></li>
+            <li><a href="/privacy" class="text-sm font-bold uppercase tracking-widest hover:text-brand-secondary transition-colors">Privacy</a></li>
           </ul>
         </div>
         <div class="bg-brand-primary/5 p-6 rounded-2xl border border-white/5">
-          <p class="text-[10px] font-black uppercase tracking-widest text-brand-secondary mb-3">Call Our Team</p>
+          <p class="text-xs font-black uppercase tracking-widest text-brand-secondary mb-3">Call Our Team</p>
           <a href={`tel:${PHONE_NUMBER}`} class="text-xl font-black text-white hover:text-brand-secondary transition-colors">{PHONE_NUMBER}</a>
-          <p class="text-[9px] text-slate-500 font-bold uppercase tracking-widest mt-2">Mon-Sat: 7am - 6pm</p>
-          <p class="text-[10px] text-slate-400 font-bold mt-4">{BUSINESS_ADDRESS}</p>
+          <p class="text-xs text-slate-500 font-bold uppercase tracking-widest mt-2">Mon-Sat: 7am - 6pm</p>
+          <p class="text-sm text-slate-400 font-bold mt-4">{BUSINESS_ADDRESS}</p>
         </div>
       </div>
     </div>
 
     <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-      <div class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">
+      <div class="text-xs text-slate-500 font-bold uppercase tracking-widest">
         &copy; {currentYear} {BUSINESS_NAME}. All rights reserved.
       </div>
       <div class="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-        <span class="text-[10px] font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
+        <span class="text-xs font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
           Nothing Too Big Concrete <span class="w-1 h-1 bg-brand-primary rounded-full"></span> WA Lic# NOTHITB775KE
         </span>
       </div>
