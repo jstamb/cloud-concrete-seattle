@@ -281,6 +281,10 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const FAQS: FAQ[] = [
   {
+    question: "What is concrete flatwork and what services does it include?",
+    answer: "Concrete flatwork refers to any poured concrete surface that is essentially flat — including driveways, patios, sidewalks, garage floors, and foundation slabs. As Seattle's premier concrete flatwork contractors, we specialize in all horizontal concrete applications with proper drainage, reinforcement, and finishing for the Pacific Northwest climate."
+  },
+  {
     question: "How much does a concrete driveway cost in Seattle?",
     answer: "For professional installation in 2025, homeowners can typically expect to pay between $12 and $22 per square foot, depending on the thickness, reinforcement, and finishing choices. Site accessibility and the need for slope stabilization can also impact the final price."
   },

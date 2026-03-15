@@ -20,8 +20,8 @@ const relatedServices = content?.relatedServices
   ?.map(slug => SERVICES.find(s => s.slug === slug))
   .filter(Boolean) ?? [];
 
-const title = `${service.name} Contractor Seattle WA | Installation & Repair`;
-const description = `Looking for a ${service.name.toLowerCase()} contractor in Seattle? Cloud Concrete offers professional installation & repair with free estimates. Licensed, bonded & insured. Call (206) 495-0997.`;
+const title = `${service.name} Seattle WA | #1 ${service.name} Contractors | Free Quote`;
+const description = `Seattle's top ${service.name.toLowerCase()} contractors. ★★★★★ 50+ reviews. Professional installation & repair with 10-year warranty. Licensed & insured. Call (206) 495-0997 for free estimate.`;
 ---
 
 <BaseLayout title={title} description={description}>
