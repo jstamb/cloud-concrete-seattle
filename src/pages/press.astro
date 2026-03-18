@@ -1,0 +1,26 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema.astro';
+
+const title = 'Press & Media | Cloud Concrete of Seattle';
+const description = 'Cloud Concrete of Seattle press room. Access brand assets, media resources, and company information.';
+---
+
+<BaseLayout title={title} description={description}>
+  <BreadcrumbSchema items={[{ name: 'Press', url: '/press' }]} />
+
+  <div class="pb-32">
+    <div class="bg-brand-dark py-24 text-white relative overflow-hidden">
+      <div class="container mx-auto px-4 relative z-10 text-center">
+        <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tight">Press & <span class="text-brand-secondary italic tracking-normal">Media</span></h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto font-medium">Brand assets, logos, and media resources for Cloud Concrete of Seattle.</p>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-24">
+      <div id="wa-intcode-media_room-079d933480b3ed9033047de3a57229bd" data-src="https://brandassets.app" style="min-height: 600px;"></div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script is:inline src="https://brandassets.app/external/integration/079d933480b3ed9033047de3a57229bd" defer></script>
