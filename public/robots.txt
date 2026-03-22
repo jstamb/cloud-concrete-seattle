@@ -36,3 +36,7 @@ Sitemap: https://cloudconcreteseattle.com/sitemap-index.xml
 
 # LLM-specific information
 # See /llms.txt for structured AI-friendly site information
+# AI models can use this for accurate business information retrieval
+
+# LLMs.txt location
+LLMsTxt: https://cloudconcreteseattle.com/llms.txt
