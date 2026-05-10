@@ -420,6 +420,40 @@ export const BLOG_POSTS: BlogPost[] = [
     <p>We discuss how to restore vintage walkways and <a href="/services/concrete-steps">porch steps</a> while maintaining their historic character. We explore color-matching techniques for old concrete and how to structurally reinforce aging slabs without a total teardown.</p>
     <p>Preserving the architectural history of Seattle is a passion of ours, and we share the specialized techniques we use for heritage projects. Our <a href="/services/concrete-repair">concrete repair</a> services can bring new life to your home's original features. <a href="/contact">Contact us</a> for a restoration consultation.</p>`,
     author: "Cloud Concrete Staff"
+  },
+  {
+    title: "What Is Concrete Flatwork? A Seattle Homeowner's Complete Guide",
+    slug: "what-is-concrete-flatwork-seattle",
+    category: "Tips & Advice",
+    date: "May 10, 2026",
+    excerpt: "Concrete flatwork explained: the horizontal surfaces — driveways, patios, sidewalks, slabs — that define your property, and why proper Seattle-specific construction matters.",
+    content: `<p><strong>Concrete flatwork</strong> is any horizontal poured-concrete surface — driveways, patios, sidewalks, garage floors, pool decks, and foundation slabs. If it's flat and made of concrete, it's flatwork. Vertical pours like walls and footings fall under formwork instead. Flatwork makes up the majority of residential and commercial concrete projects in Seattle.</p>
+    <h2>What does concrete flatwork include?</h2>
+    <ul>
+      <li><a href="/services/concrete-driveways">Concrete driveways</a> — the most common flatwork project for Seattle homeowners</li>
+      <li><a href="/services/concrete-patios">Patios</a> and outdoor living slabs</li>
+      <li><a href="/services/concrete-sidewalks">Sidewalks</a> and walkways</li>
+      <li><a href="/services/garage-floors">Garage floors</a> and shop slabs</li>
+      <li><a href="/services/pool-decks">Pool decks</a> and surrounds</li>
+      <li><a href="/services/concrete-slabs">Slab-on-grade foundations</a> for ADUs and additions</li>
+      <li>Decorative finishes including <a href="/services/stamped-concrete">stamped</a>, <a href="/services/exposed-aggregate">exposed aggregate</a>, and broom finishes</li>
+    </ul>
+    <h2>Why does concrete flatwork in Seattle require specialized expertise?</h2>
+    <p>Seattle's climate and geology make flatwork uniquely challenging. With 37+ inches of annual rainfall, glacial-till and clay soils that expand and contract, and frequent freeze-thaw cycles, a flatwork project that would last 30 years in Arizona can fail in under 10 here without proper engineering. Quality Seattle flatwork requires:</p>
+    <ol>
+      <li><strong>Subgrade preparation</strong> — compacted gravel base of 4–6 inches to prevent settling</li>
+      <li><strong>Drainage design</strong> — slope and channel drains that move water away from the slab and structure</li>
+      <li><strong>Reinforcement</strong> — rebar and/or fiber-mesh sized to the load and span</li>
+      <li><strong>Control joints</strong> — precision-cut expansion joints to direct inevitable shrinkage cracking</li>
+      <li><strong>PNW-grade mix design</strong> — air-entrained concrete (typically 5,000+ PSI) to handle freeze-thaw cycles</li>
+    </ol>
+    <h2>How much does concrete flatwork cost in Seattle?</h2>
+    <p>In 2026, Seattle-area concrete flatwork generally runs $12–$22 per square foot for standard broom-finish installation, with decorative finishes like stamped or stained concrete pricing $18–$30+ per square foot. See our detailed <a href="/blog/concrete-driveway-cost-seattle">2025 Seattle concrete pricing guide</a> for a full breakdown.</p>
+    <h2>How long does flatwork last?</h2>
+    <p>Properly installed concrete flatwork in Seattle should last 30–50 years with minimal maintenance. The biggest factors in longevity are subgrade compaction, drainage, and joint placement — not the concrete itself. Sealing every 3–5 years extends life and preserves appearance.</p>
+    <h2>Get a Seattle flatwork estimate</h2>
+    <p>Cloud Concrete of Seattle has built thousands of square feet of flatwork across the Puget Sound region — every project backed by our 10-year structural warranty. <a href="/contact">Request a free on-site estimate</a> or call <strong>(206) 495-0997</strong> to discuss your driveway, patio, or slab project.</p>`,
+    author: "Cloud Concrete Staff"
   }
 ];
 
@@ -435,4 +469,5 @@ export const BLOG_IMAGES: Record<string, string> = {
   'eco-friendly-concrete-seattle': '/images/concrete-85.jpeg',
   'prepare-property-concrete': '/images/concrete-90.jpeg',
   'historic-concrete-restoration': '/images/concrete-95.jpeg',
+  'what-is-concrete-flatwork-seattle': '/images/concrete-100.jpeg',
 };

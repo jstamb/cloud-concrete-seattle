@@ -1,3 +1,6 @@
+# robots.txt - cloudconcreteseattle.com
+# Last updated by SEO Autopilot: 2026-05-10
+
 User-agent: *
 Allow: /
 
@@ -15,19 +18,31 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
-User-agent: Claude-Web
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
-User-agent: Perplexity-Bot
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
 Allow: /
 
 # Sitemaps
