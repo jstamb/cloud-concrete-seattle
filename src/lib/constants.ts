@@ -286,7 +286,7 @@ export const FAQS: FAQ[] = [
   },
   {
     question: "How much does a concrete driveway cost in Seattle?",
-    answer: "For professional installation in 2025, homeowners can typically expect to pay between $12 and $22 per square foot, depending on the thickness, reinforcement, and finishing choices. Site accessibility and the need for slope stabilization can also impact the final price."
+    answer: "For professional installation in 2026, homeowners can typically expect to pay between $13 and $24 per square foot, depending on the thickness, reinforcement, and finishing choices. Site accessibility and the need for slope stabilization can also impact the final price."
   },
   {
     question: "How long does concrete take to cure in Seattle's climate?",
@@ -312,12 +312,12 @@ export const FAQS: FAQ[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: "How Much Does a Concrete Driveway Cost in Seattle? (2025 Price Guide)",
+    title: "How Much Does a Concrete Driveway Cost in Seattle? (2026 Price Guide)",
     slug: "concrete-driveway-cost-seattle",
     category: "Tips & Advice",
-    date: "January 12, 2025",
-    excerpt: "An in-depth look at square foot pricing, material costs, and labor for Seattle concrete projects in the current market.",
-    content: `<p>Calculating the cost of a <a href="/services/concrete-driveways">concrete driveway</a> in Seattle involves several factors: square footage, thickness, reinforcement, and local permitting. On average, homeowners can expect to pay between $12 and $22 per square foot for professional installation in 2025.</p>
+    date: "January 15, 2026",
+    excerpt: "An in-depth look at square foot pricing, material costs, and labor for Seattle concrete projects in 2026.",
+    content: `<p>Calculating the cost of a <a href="/services/concrete-driveways">concrete driveway</a> in Seattle involves several factors: square footage, thickness, reinforcement, and local permitting. On average, homeowners can expect to pay between $13 and $24 per square foot for professional installation in 2026.</p>
     <p>Factors that drive up the price include site accessibility, the degree of excavation required, and decorative finishes like <a href="/services/stamped-concrete">stamping</a> or <a href="/services/colored-concrete">staining</a>. In neighborhoods like <a href="/locations/queen-anne">Queen Anne</a> or <a href="/locations/magnolia">Magnolia</a> where slopes are steep, engineering costs and reinforced footings may also apply.</p>
     <p>At Cloud Concrete, we provide detailed, transparent quotes that break down every cost element so you can make an informed decision for your property's future. <a href="/contact">Contact us today</a> for a free estimate on your driveway project.</p>`,
     author: "Cloud Concrete Staff"
@@ -348,10 +348,10 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Permit Requirements for Concrete Work in Seattle",
     slug: "seattle-concrete-permits",
     category: "Industry News",
-    date: "March 01, 2025",
+    date: "March 01, 2026",
     excerpt: "What homeowners need to know about SDOT and DPD regulations when planning their next project.",
     content: `<p>Navigating the City of Seattle's permit requirements can be daunting. Generally, any work within the public right-of-way (like <a href="/services/concrete-sidewalks">sidewalks</a> or curb cuts) requires an SDOT Street Use permit.</p>
-    <p>For residential slabs on your property, requirements vary by size and impact on neighbors. In 2025, the city has updated its regulations regarding pervious surfaces to manage stormwater runoff.</p>
+    <p>For residential slabs on your property, requirements vary by size and impact on neighbors. In 2026, the city continues to enforce updated regulations regarding pervious surfaces to manage stormwater runoff.</p>
     <p>We stay up-to-date with all local ordinances to ensure your project is 100% legal. Our team handles the entire application process, including site plan drawings and inspection scheduling, saving you time and stress. <a href="/contact">Contact us</a> to learn more about permit requirements for your specific project.</p>`,
     author: "Cloud Concrete Staff"
   },
@@ -370,7 +370,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Best Time of Year to Pour Concrete in Seattle",
     slug: "best-time-to-pour-seattle",
     category: "Tips & Advice",
-    date: "April 15, 2025",
+    date: "April 15, 2026",
     excerpt: "Navigating the PNW weather for a perfect cure. When to schedule your project for the best results.",
     content: `<p>While professional crews can pour concrete almost year-round in Seattle, certain windows offer better predictability for the finishing process. We discuss the pros and cons of spring, summer, and fall pours.</p>
     <p>Summer offers the most stable conditions, but also requires careful moisture management to prevent the concrete from drying too quickly. Fall pours are excellent for curing but require a keen eye on the rain forecast.</p>
