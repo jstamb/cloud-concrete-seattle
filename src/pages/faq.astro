@@ -1,0 +1,109 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BreadcrumbSchema from '@/components/BreadcrumbSchema.astro';
+import FAQSchema from '@/components/FAQSchema.astro';
+import { FAQS, PHONE_NUMBER } from '@/lib/constants';
+
+const title = 'Concrete Contractor FAQ | Common Questions About Seattle Concrete Work';
+const description = "Get answers to frequently asked questions about concrete work in Seattle. Learn about costs, curing times, permits, and more from Cloud Concrete of Seattle's experts.";
+
+// Extended FAQs for this page
+const extendedFaqs = [
+  ...FAQS,
+  {
+    question: "What warranty do you offer on concrete work?",
+    answer: "We provide a 10-year structural warranty on all concrete flatwork including driveways, patios, and foundations. This covers structural integrity and major cracking due to workmanship. Minor hairline cracks from natural curing are normal and not covered, but we take extensive measures to minimize them."
+  },
+  {
+    question: "How do I maintain my concrete driveway in Seattle?",
+    answer: "We recommend resealing your concrete every 3-5 years to maintain moisture protection. Keep the surface clean by power washing annually, and avoid using deicing chemicals which can cause surface spalling. Address any cracks promptly to prevent water infiltration and further damage."
+  },
+  {
+    question: "Can you pour concrete in the rain?",
+    answer: "Light rain after the concrete has set is not a major issue, but we avoid pouring during active rainfall. Seattle's frequent drizzle requires careful scheduling. We monitor forecasts closely and use protective covers when needed to ensure proper curing and finishing."
+  },
+  {
+    question: "What's the difference between concrete and cement?",
+    answer: "Cement is actually an ingredient in concrete. Concrete is made by mixing cement (the binding agent) with water, sand, and aggregate (gravel or crushed stone). So when you have a 'cement driveway,' it's technically a concrete driveway."
+  },
+  {
+    question: "Do you offer colored or stained concrete options?",
+    answer: "Yes! We offer integral color (mixed throughout the concrete before pouring), acid staining for unique mottled effects, and water-based stains for a wider color palette. Integral color is most durable since the color runs through the entire slab depth."
+  },
+  {
+    question: "How thick should a concrete driveway be?",
+    answer: "Standard residential driveways should be at least 4 inches thick. For driveways that will support heavy vehicles like RVs or delivery trucks, we recommend 5-6 inches with heavier reinforcement. The subbase preparation is equally important for long-term durability."
+  },
+  {
+    question: "What areas do you serve?",
+    answer: "We serve all Seattle neighborhoods including Ballard, Queen Anne, Capitol Hill, West Seattle, Fremont, and more. We also cover greater Seattle areas including Bellevue, Kirkland, Redmond, Renton, Burien, Shoreline, and surrounding communities."
+  },
+  {
+    question: "How long does a concrete project typically take?",
+    answer: "Most residential projects take 1-3 days for the actual pour, depending on size and complexity. However, you should plan for 1-2 weeks total including preparation, curing time, and any finish work. Larger commercial projects may take longer."
+  }
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <BreadcrumbSchema items={[{ name: 'FAQ', url: '/faq' }]} />
+  <FAQSchema faqs={extendedFaqs} />
+
+  <div class="pb-32">
+    <div class="bg-brand-dark py-24 text-white relative overflow-hidden">
+      <div class="container mx-auto px-4 relative z-10 text-center">
+        <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tight">Frequently Asked <span class="text-brand-secondary italic tracking-normal">Questions</span></h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto font-medium">Everything you need to know about concrete work in Seattle, from costs to curing times.</p>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-24">
+      <div class="max-w-4xl mx-auto">
+        <!-- Quick Jump Links -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm mb-16">
+          <h2 class="text-xl font-black text-brand-dark mb-6 uppercase tracking-tight">Quick Navigation</h2>
+          <div class="flex flex-wrap gap-3">
+            <a href="#costs" class="bg-brand-primary/10 text-brand-primary px-4 py-2 rounded-full text-sm font-bold hover:bg-brand-primary hover:text-white transition-colors">Costs & Pricing</a>
+            <a href="#process" class="bg-brand-primary/10 text-brand-primary px-4 py-2 rounded-full text-sm font-bold hover:bg-brand-primary hover:text-white transition-colors">Process & Timeline</a>
+            <a href="#maintenance" class="bg-brand-primary/10 text-brand-primary px-4 py-2 rounded-full text-sm font-bold hover:bg-brand-primary hover:text-white transition-colors">Maintenance</a>
+            <a href="#permits" class="bg-brand-primary/10 text-brand-primary px-4 py-2 rounded-full text-sm font-bold hover:bg-brand-primary hover:text-white transition-colors">Permits & Regulations</a>
+          </div>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="space-y-6">
+          {extendedFaqs.map((faq, index) => (
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-lg transition-all group">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-brand-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-brand-primary transition-colors">
+                  <span class="text-brand-primary font-black text-sm group-hover:text-white transition-colors">{index + 1}</span>
+                </div>
+                <div class="flex-1">
+                  <h2 class="text-lg font-black text-brand-dark mb-4 leading-tight">{faq.question}</h2>
+                  <p class="text-slate-600 leading-relaxed">{faq.answer}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- CTA Section -->
+        <div class="mt-20 bg-brand-dark p-12 rounded-[3rem] text-white text-center relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full -mr-32 -mt-32"></div>
+          <div class="relative z-10">
+            <h2 class="text-3xl font-black mb-4 uppercase tracking-tight">Still Have Questions?</h2>
+            <p class="text-slate-400 mb-8 max-w-xl mx-auto">Our team is here to help. Get a free consultation and personalized answers for your specific project.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="/contact" class="bg-brand-primary hover:brightness-110 text-white px-8 py-4 rounded-xl font-black text-sm uppercase tracking-widest shadow-xl transition-all">
+                Get Free Estimate
+              </a>
+              <a href={`tel:${PHONE_NUMBER}`} class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-xl font-black text-sm uppercase tracking-widest transition-all">
+                Call (206) 495-0997
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
