@@ -3,7 +3,7 @@ import { DOMAIN } from '@/lib/constants';
 
 export const GET: APIRoute = async () => {
   const robotsTxt = `# robots.txt - Cloud Concrete of Seattle
-# Last updated by SEO Autopilot: 2026-03-01
+# Last updated by SEO Autopilot: 2026-03-08
 
 User-agent: *
 Allow: /
