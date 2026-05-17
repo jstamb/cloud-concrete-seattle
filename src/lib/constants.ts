@@ -454,6 +454,52 @@ export const BLOG_POSTS: BlogPost[] = [
     <h2>Get a Seattle flatwork estimate</h2>
     <p>Cloud Concrete of Seattle has built thousands of square feet of flatwork across the Puget Sound region — every project backed by our 10-year structural warranty. <a href="/contact">Request a free on-site estimate</a> or call <strong>(206) 495-0997</strong> to discuss your driveway, patio, or slab project.</p>`,
     author: "Cloud Concrete Staff"
+  },
+  {
+    title: "How to Choose a Concrete Contractor in Seattle (2026 Guide)",
+    slug: "how-to-choose-concrete-contractor-seattle",
+    category: "Tips & Advice",
+    date: "May 17, 2026",
+    excerpt: "A practical checklist for hiring concrete contractors in Seattle — licensing, drainage expertise, warranties, and the questions that separate pros from problems.",
+    content: `<p><strong>Choosing a concrete contractor in Seattle</strong> comes down to five things: a valid Washington L&amp;I license and bond, proven Pacific Northwest drainage experience, a written warranty, transparent line-item pricing, and verifiable local references. Get all five in writing before you sign anything.</p>
+    <h2>What should I look for in a Seattle concrete contractor?</h2>
+    <ul>
+      <li><strong>Licensed &amp; bonded</strong> — verify the contractor's registration at the WA L&amp;I site; it protects you if work goes wrong.</li>
+      <li><strong>Drainage-first approach</strong> — Seattle's 37+ inches of annual rain makes subgrade prep and slope the #1 predictor of how long <a href="/blog/what-is-concrete-flatwork-seattle">flatwork</a> lasts. Ask how they handle runoff.</li>
+      <li><strong>Written 10-year warranty</strong> — reputable Seattle <a href="/services/concrete-foundations">foundation</a> and flatwork crews stand behind structural work.</li>
+      <li><strong>Local references</strong> — ask for recent projects in your neighborhood, from <a href="/locations/ballard">Ballard</a> to <a href="/locations/capitol-hill">Capitol Hill</a>.</li>
+      <li><strong>Detailed estimates</strong> — a real quote breaks out excavation, base, rebar, concrete PSI, and finishing — not one lump sum.</li>
+    </ul>
+    <h2>What questions should I ask before hiring?</h2>
+    <ol>
+      <li>What concrete mix PSI do you use for Seattle freeze-thaw conditions?</li>
+      <li>How deep is your gravel base and do you install a vapor barrier?</li>
+      <li>Do you pull SDOT permits for right-of-way work?</li>
+      <li>What's covered by your warranty and for how long?</li>
+      <li>Can I see <a href="/case-studies">case studies</a> from similar projects?</li>
+    </ol>
+    <h2>Why local Seattle experience matters</h2>
+    <p>Seattle's glacial-till and clay soils, steep grades, and seismic code requirements make this one of the most demanding concrete environments in the country. A contractor experienced in Phoenix or Dallas can pour a slab that fails here within a decade. Local expertise in drainage engineering and air-entrained mix design is not optional — it's the difference between a 15-year and a 50-year surface.</p>
+    <h2>Get a free Seattle estimate</h2>
+    <p>Cloud Concrete of Seattle is licensed, bonded, and insured, with a 10-year structural warranty on every project across the Puget Sound region. <a href="/contact">Request a free on-site estimate</a> or call <strong>(206) 495-0997</strong>.</p>`,
+    author: "Cloud Concrete Staff"
+  },
+  {
+    title: "Concrete Pool Deck Cost & Options in Seattle (2026)",
+    slug: "concrete-pool-deck-cost-seattle",
+    category: "Tips & Advice",
+    date: "May 17, 2026",
+    excerpt: "What a concrete pool deck costs in Seattle, the best slip-resistant finishes for our wet climate, and why drainage design protects your investment.",
+    content: `<p>A <strong>concrete pool deck in Seattle</strong> typically costs <strong>$14–$28 per square foot</strong> installed in 2026, depending on the finish. Broom-finish runs at the low end; <a href="/services/exposed-aggregate">exposed aggregate</a> and <a href="/services/stamped-concrete">stamped concrete</a> pool decks run $20–$30+ per square foot.</p>
+    <h2>What is the best pool deck finish for Seattle's climate?</h2>
+    <p>Slip resistance is the priority in a rainy climate. Exposed aggregate and broom finishes provide the most traction when wet, which is why they're the most-requested pool deck finishes among Seattle homeowners. Stamped concrete adds high-end style but should be sealed with a grit-additive sealer for safety around water.</p>
+    <h2>Why does drainage matter for pool decks?</h2>
+    <p>Standing water is the enemy of a Seattle pool deck. Without a proper 1–2% slope and channel drains directing water away from the slab and pool shell, freeze-thaw cycles will spall the surface and undermine the subgrade. Every pool deck we pour includes engineered drainage as part of the base price — not an upsell.</p>
+    <h2>How long does a concrete pool deck last?</h2>
+    <p>A properly engineered, sealed concrete pool deck lasts 25–40 years in Seattle with resealing every 2–3 years. Subgrade compaction and drainage — not the concrete itself — determine longevity. See our <a href="/blog/what-is-concrete-flatwork-seattle">flatwork guide</a> for how slab construction affects lifespan.</p>
+    <h2>Get a free pool deck estimate</h2>
+    <p>Cloud Concrete of Seattle builds slip-resistant, drainage-engineered <a href="/services/pool-decks">pool decks</a> backed by a 10-year warranty. <a href="/contact">Request a free estimate</a> or call <strong>(206) 495-0997</strong>.</p>`,
+    author: "Cloud Concrete Staff"
   }
 ];
 
@@ -470,4 +516,6 @@ export const BLOG_IMAGES: Record<string, string> = {
   'prepare-property-concrete': '/images/concrete-90.jpeg',
   'historic-concrete-restoration': '/images/concrete-95.jpeg',
   'what-is-concrete-flatwork-seattle': '/images/concrete-100.jpeg',
+  'how-to-choose-concrete-contractor-seattle': '/images/concrete-30.jpeg',
+  'concrete-pool-deck-cost-seattle': '/images/concrete-45.jpeg',
 };
