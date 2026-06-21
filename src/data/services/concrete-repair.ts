@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const concreteRepair: ServiceContent = {
+  metaTitle: 'Concrete Repair & Resurfacing Seattle | Fix Cracks & Spalling',
+  metaDescription: 'Seattle concrete repair & resurfacing — crack repair, spalling, leveling & overlays at a fraction of replacement cost. Licensed, 10-yr warranty. Free estimate: (206) 495-0997.',
   benefits: [
     {
       title: "Restoration at a Fraction of Replacement Cost",
