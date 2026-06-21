@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const concreteDriveways: ServiceContent = {
+  metaTitle: 'Concrete Driveway Contractors Seattle | Install & Replace',
+  metaDescription: 'Seattle concrete driveway contractors — new installs, replacements & repairs engineered for PNW drainage. Licensed, 10-yr warranty, free estimates. Call (206) 495-0997.',
   benefits: [
     {
       title: "Engineered for Seattle's Freeze-Thaw Cycles",
