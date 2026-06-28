@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const concreteCurbing: ServiceContent = {
+  metaTitle: 'Concrete Curbing Seattle | Landscape Edging & Borders',
+  metaDescription: 'Seattle concrete curbing — permanent extruded landscape edging & garden borders that never rot or shift like plastic or wood. Free estimates: (206) 495-0997.',
   benefits: [
     {
       title: "Permanent Borders That Never Rot, Shift, or Require Replacement",

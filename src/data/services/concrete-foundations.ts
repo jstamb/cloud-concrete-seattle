@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const concreteFoundations: ServiceContent = {
+  metaTitle: 'Concrete Foundation Contractors Seattle | Footings & Slabs',
+  metaDescription: 'Seattle concrete foundation contractors — seismic-engineered footings, stem walls & slab foundations for homes & ADUs. Licensed, 10-yr warranty. (206) 495-0997.',
   benefits: [
     {
       title: "Seismic Resistance Engineered to Seattle Standards",
