@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const stampedConcrete: ServiceContent = {
+  metaTitle: 'Stamped Concrete Seattle | Patios, Driveways & Walkways',
+  metaDescription: 'Seattle stamped concrete contractors — slate, flagstone & cobblestone patterns for patios, driveways & walkways. Licensed, 10-yr warranty. Call (206) 495-0997.',
   benefits: [
     {
       title: "Dozens of Patterns That Replicate Natural Materials",
