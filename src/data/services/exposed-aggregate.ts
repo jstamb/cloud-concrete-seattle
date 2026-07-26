@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const exposedAggregate: ServiceContent = {
+  metaTitle: 'Exposed Aggregate Concrete Seattle | Driveways, Patios & Walkways',
+  metaDescription: 'Seattle exposed aggregate concrete — slip-resistant, decorative finishes for driveways, patios & pool decks. Custom aggregate blends. Licensed, 10-yr warranty. Call (206) 495-0997.',
   benefits: [
     {
       title: "Exceptional Wet-Weather Traction",

@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const concreteSidewalks: ServiceContent = {
+  metaTitle: 'Concrete Sidewalk Contractors Seattle | Repair & Installation',
+  metaDescription: 'Expert concrete sidewalk installation & repair in Seattle. ADA-compliant, SDOT-permitted, freeze-thaw resistant. Licensed, 10-yr warranty. Free estimate: (206) 495-0997.',
   benefits: [
     {
       title: "ADA Compliance and City of Seattle Standards",
