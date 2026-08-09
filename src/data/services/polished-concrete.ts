@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const polishedConcrete: ServiceContent = {
+  metaTitle: 'Polished Concrete Floors Seattle WA | Residential & Commercial',
+  metaDescription: 'Seattle polished concrete contractor — diamond-ground floors for homes, offices & retail. Zero-VOC, radiant-heat compatible, 10-yr durability. Free slab assessment: (206) 495-0997.',
   benefits: [
     {
       title: "Exceptional Durability for High-Traffic Spaces",

@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const concreteSlabs: ServiceContent = {
+  metaTitle: 'Concrete Slabs Seattle WA | Garage, Shed & Foundation Slab Pros',
+  metaDescription: 'Expert concrete slab installation in Seattle — garage floors, shed pads, ADU foundations & warehouse slabs. Laser-leveled, rebar-reinforced. Licensed & insured. Free quote: (206) 495-0997.',
   benefits: [
     {
       title: "Laser-Leveled Precision for Structural Integrity",

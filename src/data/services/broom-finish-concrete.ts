@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const broomFinishConcrete: ServiceContent = {
+  metaTitle: 'Broom Finish Concrete Seattle WA | Slip-Resistant Flatwork Pros',
+  metaDescription: 'Seattle broom finish concrete contractor — textured, slip-resistant driveways, sidewalks & patios. Durable in PNW rain & freeze-thaw. Licensed, 10-yr warranty. Call (206) 495-0997.',
   benefits: [
     {
       title: "Superior Wet-Weather Traction",

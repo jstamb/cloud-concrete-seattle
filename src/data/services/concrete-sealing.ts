@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const concreteSealing: ServiceContent = {
+  metaTitle: 'Concrete Sealing Seattle WA | Driveways, Patios & Decorative',
+  metaDescription: 'Professional concrete sealing in Seattle — penetrating & topical sealers stop moisture damage, spalling & moss. Protect driveways, patios & stamped concrete. Free estimate: (206) 495-0997.',
   benefits: [
     {
       title: "Stops Seattle's Moisture at the Surface",
