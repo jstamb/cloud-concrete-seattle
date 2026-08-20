@@ -1,5 +1,5 @@
 # robots.txt - cloudconcreteseattle.com
-# Last updated by SEO Autopilot: 2026-06-21
+# Last updated by SEO Autopilot: 2026-08-20
 
 User-agent: *
 Allow: /
@@ -40,7 +40,7 @@ User-agent: cohere-ai
 Allow: /
 
 # Sitemap
-Sitemap: https://cloudconcreteseattle.com/sitemap.xml
+Sitemap: https://www.cloudconcreteseattle.com/sitemap.xml
 
 # Structured AI-friendly site information
 # See https://cloudconcreteseattle.com/llms.txt
