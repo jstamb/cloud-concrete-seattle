@@ -1,8 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const concretePatios: ServiceContent = {
-  metaTitle: 'Concrete Patio Contractors Seattle | Custom Patio Installs',
-  metaDescription: 'Seattle concrete patio contractors building custom outdoor living spaces — stamped, broom & exposed finishes. Licensed, 10-yr warranty, free estimates. Call (206) 495-0997.',
+  metaTitle: 'Concrete Patio Contractors Seattle WA | Custom Outdoor Living',
+  metaDescription: 'Seattle concrete patio experts — stamped, broom-finish & exposed aggregate patios engineered for year-round PNW use. Licensed, 10-yr warranty. Free estimate: (206) 495-0997.',
   benefits: [
     {
       title: "Engineered Drainage for Year-Round Usability",
