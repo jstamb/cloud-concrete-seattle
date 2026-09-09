@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const concreteLeveling: ServiceContent = {
+  metaTitle: 'Concrete Leveling Seattle WA | Mudjacking & Foam Lifting Pros',
+  metaDescription: 'Seattle concrete leveling experts — mudjacking & polyurethane foam injection fix sunken driveways, sidewalks & patios at 50% less than replacement. Same-day cure. Free estimate: (206) 495-0997.',
   benefits: [
     {
       title: "Eliminate Dangerous Trip Hazards",
