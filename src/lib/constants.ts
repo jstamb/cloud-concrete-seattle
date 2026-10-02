@@ -97,11 +97,11 @@ export const SERVICES: Service[] = [
     priceIndicator: "$"
   },
   {
-    name: "Concrete Leveling",
+    name: "Concrete Leveling & Slab Lifting",
     slug: "concrete-leveling",
     category: "repair",
-    keywords: ["mudjacking", "slab jacking", "concrete lifting", "uneven concrete"],
-    shortDescription: "Fix sunken slabs and trip hazards with precise concrete leveling and lifting.",
+    keywords: ["concrete leveling seattle", "mudjacking", "slab lifting", "concrete raising", "sunken concrete"],
+    shortDescription: "Fast concrete leveling and slab lifting for sunken driveways and dangerous trip hazards in Seattle.",
     longDescription: "Sunken concrete is one of the most common problems facing Seattle homeowners, and it is almost never caused by poor concrete work. The real culprit is the ground beneath it. Seattle sits on a complex patchwork of glacial till, marine clay, and organic fill — soils that shift, compress, and wash away with every passing rainy season. When the subsoil erodes or compresses unevenly, the concrete above loses its support and begins to sink, crack, and tilt. The result is a trip hazard on your front walk, a low spot on your driveway that pools standing water, or a garage floor that no longer lines up with the overhead door threshold. These are not cosmetic nuisances — they are safety liabilities and early warning signs of accelerating structural failure.\n\nAt Cloud Concrete of Seattle, we approach concrete leveling with two proven methodologies, and we select the right one based on a thorough site assessment. Polyurethane foam injection — sometimes called polyjacking or foam lifting — involves drilling a series of small, penny-sized holes through the sunken slab, then injecting a high-density, two-part expanding foam into the void beneath. Within seconds, the foam expands to fill the cavity, compresses the underlying soil, and lifts the concrete back to its original elevation with millimeter-level precision. The foam cures to a hard, water-resistant, permanent solid within 15 minutes, meaning you can walk on the surface the same day and drive on it within hours. This technique is ideal for walkways, pool decks, driveway panels, and interior slabs where minimizing downtime is critical.\n\nFor situations where larger voids exist or soil conditions require bulk material, we also employ traditional mudjacking — a technique that pumps a pressurized slurry of Portland cement, water, and soil through larger-diameter holes to fill cavities and hydraulically lift the slab. Mudjacking has a longer track record on the market and remains an excellent, cost-effective solution for garage floors and larger flatwork areas where the primary goal is stability and structural support rather than cosmetic perfection.\n\nBoth methods cost a fraction of full slab demolition and replacement. When you factor in the cost of breaking out old concrete, hauling away debris, re-grading the subbase, and pouring a new slab, leveling consistently delivers savings of 50 to 75 percent. Just as importantly, it eliminates the significant embodied-carbon footprint of new concrete production — a meaningful consideration for environmentally conscious homeowners in the Emerald City.\n\nWe serve neighborhoods across Seattle where settling slabs are especially prevalent, including Beacon Hill, West Seattle, and the Rainier Valley, where hillside lots, clay-heavy soils, and older infrastructure create prime conditions for void development beneath slabs. After any leveling job, we strongly recommend pairing the repair with professional concrete sealing to prevent future water infiltration that accelerates the same soil erosion cycle all over again. We also inspect adjacent slabs and expansion joints as part of every evaluation, because a sunken panel rarely sinks in isolation — where one void exists, others are often forming nearby.\n\nIf you have noticed an uneven surface on your property, do not wait until someone trips or until the gap grows large enough to require full replacement. Reach out to us at (206) 495-0997 or visit our contact page to schedule a free, no-obligation assessment. We will measure the differential, probe the void, and give you a straight answer about whether leveling is the right solution or whether replacement is genuinely warranted — with no pressure either way.",
     priceIndicator: "$$"
   },
@@ -286,7 +286,7 @@ export const FAQS: FAQ[] = [
   },
   {
     question: "How much does a concrete driveway cost in Seattle?",
-    answer: "For professional installation in 2025, homeowners can typically expect to pay between $12 and $22 per square foot, depending on the thickness, reinforcement, and finishing choices. Site accessibility and the need for slope stabilization can also impact the final price."
+    answer: "For professional installation in 2026, homeowners can typically expect to pay between $13 and $24 per square foot, depending on the thickness, reinforcement, and finishing choices. Site accessibility and the need for slope stabilization can also impact the final price."
   },
   {
     question: "How long does concrete take to cure in Seattle's climate?",
@@ -312,12 +312,12 @@ export const FAQS: FAQ[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: "How Much Does a Concrete Driveway Cost in Seattle? (2025 Price Guide)",
+    title: "How Much Does a Concrete Driveway Cost in Seattle? (2026 Price Guide)",
     slug: "concrete-driveway-cost-seattle",
     category: "Tips & Advice",
-    date: "January 12, 2025",
-    excerpt: "An in-depth look at square foot pricing, material costs, and labor for Seattle concrete projects in the current market.",
-    content: `<p>Calculating the cost of a <a href="/services/concrete-driveways">concrete driveway</a> in Seattle involves several factors: square footage, thickness, reinforcement, and local permitting. On average, homeowners can expect to pay between $12 and $22 per square foot for professional installation in 2025.</p>
+    date: "January 15, 2026",
+    excerpt: "An in-depth look at square foot pricing, material costs, and labor for Seattle concrete projects in 2026.",
+    content: `<p>Calculating the cost of a <a href="/services/concrete-driveways">concrete driveway</a> in Seattle involves several factors: square footage, thickness, reinforcement, and local permitting. On average, homeowners can expect to pay between $13 and $24 per square foot for professional installation in 2026.</p>
     <p>Factors that drive up the price include site accessibility, the degree of excavation required, and decorative finishes like <a href="/services/stamped-concrete">stamping</a> or <a href="/services/colored-concrete">staining</a>. In neighborhoods like <a href="/locations/queen-anne">Queen Anne</a> or <a href="/locations/magnolia">Magnolia</a> where slopes are steep, engineering costs and reinforced footings may also apply.</p>
     <p>At Cloud Concrete, we provide detailed, transparent quotes that break down every cost element so you can make an informed decision for your property's future. <a href="/contact">Contact us today</a> for a free estimate on your driveway project.</p>`,
     author: "Cloud Concrete Staff"
@@ -348,10 +348,10 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Permit Requirements for Concrete Work in Seattle",
     slug: "seattle-concrete-permits",
     category: "Industry News",
-    date: "March 01, 2025",
+    date: "March 01, 2026",
     excerpt: "What homeowners need to know about SDOT and DPD regulations when planning their next project.",
     content: `<p>Navigating the City of Seattle's permit requirements can be daunting. Generally, any work within the public right-of-way (like <a href="/services/concrete-sidewalks">sidewalks</a> or curb cuts) requires an SDOT Street Use permit.</p>
-    <p>For residential slabs on your property, requirements vary by size and impact on neighbors. In 2025, the city has updated its regulations regarding pervious surfaces to manage stormwater runoff.</p>
+    <p>For residential slabs on your property, requirements vary by size and impact on neighbors. In 2026, the city continues to enforce updated regulations regarding pervious surfaces to manage stormwater runoff.</p>
     <p>We stay up-to-date with all local ordinances to ensure your project is 100% legal. Our team handles the entire application process, including site plan drawings and inspection scheduling, saving you time and stress. <a href="/contact">Contact us</a> to learn more about permit requirements for your specific project.</p>`,
     author: "Cloud Concrete Staff"
   },
@@ -370,7 +370,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "The Best Time of Year to Pour Concrete in Seattle",
     slug: "best-time-to-pour-seattle",
     category: "Tips & Advice",
-    date: "April 15, 2025",
+    date: "April 15, 2026",
     excerpt: "Navigating the PNW weather for a perfect cure. When to schedule your project for the best results.",
     content: `<p>While professional crews can pour concrete almost year-round in Seattle, certain windows offer better predictability for the finishing process. We discuss the pros and cons of spring, summer, and fall pours.</p>
     <p>Summer offers the most stable conditions, but also requires careful moisture management to prevent the concrete from drying too quickly. Fall pours are excellent for curing but require a keen eye on the rain forecast.</p>
@@ -420,6 +420,86 @@ export const BLOG_POSTS: BlogPost[] = [
     <p>We discuss how to restore vintage walkways and <a href="/services/concrete-steps">porch steps</a> while maintaining their historic character. We explore color-matching techniques for old concrete and how to structurally reinforce aging slabs without a total teardown.</p>
     <p>Preserving the architectural history of Seattle is a passion of ours, and we share the specialized techniques we use for heritage projects. Our <a href="/services/concrete-repair">concrete repair</a> services can bring new life to your home's original features. <a href="/contact">Contact us</a> for a restoration consultation.</p>`,
     author: "Cloud Concrete Staff"
+  },
+  {
+    title: "What Is Concrete Flatwork? A Seattle Homeowner's Complete Guide",
+    slug: "what-is-concrete-flatwork-seattle",
+    category: "Tips & Advice",
+    date: "May 10, 2026",
+    excerpt: "Concrete flatwork explained: the horizontal surfaces — driveways, patios, sidewalks, slabs — that define your property, and why proper Seattle-specific construction matters.",
+    content: `<p><strong>Concrete flatwork</strong> is any horizontal poured-concrete surface — driveways, patios, sidewalks, garage floors, pool decks, and foundation slabs. If it's flat and made of concrete, it's flatwork. Vertical pours like walls and footings fall under formwork instead. Flatwork makes up the majority of residential and commercial concrete projects in Seattle.</p>
+    <h2>What does concrete flatwork include?</h2>
+    <ul>
+      <li><a href="/services/concrete-driveways">Concrete driveways</a> — the most common flatwork project for Seattle homeowners</li>
+      <li><a href="/services/concrete-patios">Patios</a> and outdoor living slabs</li>
+      <li><a href="/services/concrete-sidewalks">Sidewalks</a> and walkways</li>
+      <li><a href="/services/garage-floors">Garage floors</a> and shop slabs</li>
+      <li><a href="/services/pool-decks">Pool decks</a> and surrounds</li>
+      <li><a href="/services/concrete-slabs">Slab-on-grade foundations</a> for ADUs and additions</li>
+      <li>Decorative finishes including <a href="/services/stamped-concrete">stamped</a>, <a href="/services/exposed-aggregate">exposed aggregate</a>, and broom finishes</li>
+    </ul>
+    <h2>Why does concrete flatwork in Seattle require specialized expertise?</h2>
+    <p>Seattle's climate and geology make flatwork uniquely challenging. With 37+ inches of annual rainfall, glacial-till and clay soils that expand and contract, and frequent freeze-thaw cycles, a flatwork project that would last 30 years in Arizona can fail in under 10 here without proper engineering. Quality Seattle flatwork requires:</p>
+    <ol>
+      <li><strong>Subgrade preparation</strong> — compacted gravel base of 4–6 inches to prevent settling</li>
+      <li><strong>Drainage design</strong> — slope and channel drains that move water away from the slab and structure</li>
+      <li><strong>Reinforcement</strong> — rebar and/or fiber-mesh sized to the load and span</li>
+      <li><strong>Control joints</strong> — precision-cut expansion joints to direct inevitable shrinkage cracking</li>
+      <li><strong>PNW-grade mix design</strong> — air-entrained concrete (typically 5,000+ PSI) to handle freeze-thaw cycles</li>
+    </ol>
+    <h2>How much does concrete flatwork cost in Seattle?</h2>
+    <p>In 2026, Seattle-area concrete flatwork generally runs $12–$22 per square foot for standard broom-finish installation, with decorative finishes like stamped or stained concrete pricing $18–$30+ per square foot. See our detailed <a href="/blog/concrete-driveway-cost-seattle">2025 Seattle concrete pricing guide</a> for a full breakdown.</p>
+    <h2>How long does flatwork last?</h2>
+    <p>Properly installed concrete flatwork in Seattle should last 30–50 years with minimal maintenance. The biggest factors in longevity are subgrade compaction, drainage, and joint placement — not the concrete itself. Sealing every 3–5 years extends life and preserves appearance.</p>
+    <h2>Get a Seattle flatwork estimate</h2>
+    <p>Cloud Concrete of Seattle has built thousands of square feet of flatwork across the Puget Sound region — every project backed by our 10-year structural warranty. <a href="/contact">Request a free on-site estimate</a> or call <strong>(206) 495-0997</strong> to discuss your driveway, patio, or slab project.</p>`,
+    author: "Cloud Concrete Staff"
+  },
+  {
+    title: "How to Choose a Concrete Contractor in Seattle (2026 Guide)",
+    slug: "how-to-choose-concrete-contractor-seattle",
+    category: "Tips & Advice",
+    date: "May 17, 2026",
+    excerpt: "A practical checklist for hiring concrete contractors in Seattle — licensing, drainage expertise, warranties, and the questions that separate pros from problems.",
+    content: `<p><strong>Choosing a concrete contractor in Seattle</strong> comes down to five things: a valid Washington L&amp;I license and bond, proven Pacific Northwest drainage experience, a written warranty, transparent line-item pricing, and verifiable local references. Get all five in writing before you sign anything.</p>
+    <h2>What should I look for in a Seattle concrete contractor?</h2>
+    <ul>
+      <li><strong>Licensed &amp; bonded</strong> — verify the contractor's registration at the WA L&amp;I site; it protects you if work goes wrong.</li>
+      <li><strong>Drainage-first approach</strong> — Seattle's 37+ inches of annual rain makes subgrade prep and slope the #1 predictor of how long <a href="/blog/what-is-concrete-flatwork-seattle">flatwork</a> lasts. Ask how they handle runoff.</li>
+      <li><strong>Written 10-year warranty</strong> — reputable Seattle <a href="/services/concrete-foundations">foundation</a> and flatwork crews stand behind structural work.</li>
+      <li><strong>Local references</strong> — ask for recent projects in your neighborhood, from <a href="/locations/ballard">Ballard</a> to <a href="/locations/capitol-hill">Capitol Hill</a>.</li>
+      <li><strong>Detailed estimates</strong> — a real quote breaks out excavation, base, rebar, concrete PSI, and finishing — not one lump sum.</li>
+    </ul>
+    <h2>What questions should I ask before hiring?</h2>
+    <ol>
+      <li>What concrete mix PSI do you use for Seattle freeze-thaw conditions?</li>
+      <li>How deep is your gravel base and do you install a vapor barrier?</li>
+      <li>Do you pull SDOT permits for right-of-way work?</li>
+      <li>What's covered by your warranty and for how long?</li>
+      <li>Can I see <a href="/case-studies">case studies</a> from similar projects?</li>
+    </ol>
+    <h2>Why local Seattle experience matters</h2>
+    <p>Seattle's glacial-till and clay soils, steep grades, and seismic code requirements make this one of the most demanding concrete environments in the country. A contractor experienced in Phoenix or Dallas can pour a slab that fails here within a decade. Local expertise in drainage engineering and air-entrained mix design is not optional — it's the difference between a 15-year and a 50-year surface.</p>
+    <h2>Get a free Seattle estimate</h2>
+    <p>Cloud Concrete of Seattle is licensed, bonded, and insured, with a 10-year structural warranty on every project across the Puget Sound region. <a href="/contact">Request a free on-site estimate</a> or call <strong>(206) 495-0997</strong>.</p>`,
+    author: "Cloud Concrete Staff"
+  },
+  {
+    title: "Concrete Pool Deck Cost & Options in Seattle (2026)",
+    slug: "concrete-pool-deck-cost-seattle",
+    category: "Tips & Advice",
+    date: "May 17, 2026",
+    excerpt: "What a concrete pool deck costs in Seattle, the best slip-resistant finishes for our wet climate, and why drainage design protects your investment.",
+    content: `<p>A <strong>concrete pool deck in Seattle</strong> typically costs <strong>$14–$28 per square foot</strong> installed in 2026, depending on the finish. Broom-finish runs at the low end; <a href="/services/exposed-aggregate">exposed aggregate</a> and <a href="/services/stamped-concrete">stamped concrete</a> pool decks run $20–$30+ per square foot.</p>
+    <h2>What is the best pool deck finish for Seattle's climate?</h2>
+    <p>Slip resistance is the priority in a rainy climate. Exposed aggregate and broom finishes provide the most traction when wet, which is why they're the most-requested pool deck finishes among Seattle homeowners. Stamped concrete adds high-end style but should be sealed with a grit-additive sealer for safety around water.</p>
+    <h2>Why does drainage matter for pool decks?</h2>
+    <p>Standing water is the enemy of a Seattle pool deck. Without a proper 1–2% slope and channel drains directing water away from the slab and pool shell, freeze-thaw cycles will spall the surface and undermine the subgrade. Every pool deck we pour includes engineered drainage as part of the base price — not an upsell.</p>
+    <h2>How long does a concrete pool deck last?</h2>
+    <p>A properly engineered, sealed concrete pool deck lasts 25–40 years in Seattle with resealing every 2–3 years. Subgrade compaction and drainage — not the concrete itself — determine longevity. See our <a href="/blog/what-is-concrete-flatwork-seattle">flatwork guide</a> for how slab construction affects lifespan.</p>
+    <h2>Get a free pool deck estimate</h2>
+    <p>Cloud Concrete of Seattle builds slip-resistant, drainage-engineered <a href="/services/pool-decks">pool decks</a> backed by a 10-year warranty. <a href="/contact">Request a free estimate</a> or call <strong>(206) 495-0997</strong>.</p>`,
+    author: "Cloud Concrete Staff"
   }
 ];
 
@@ -435,4 +515,7 @@ export const BLOG_IMAGES: Record<string, string> = {
   'eco-friendly-concrete-seattle': '/images/concrete-85.jpeg',
   'prepare-property-concrete': '/images/concrete-90.jpeg',
   'historic-concrete-restoration': '/images/concrete-95.jpeg',
+  'what-is-concrete-flatwork-seattle': '/images/concrete-100.jpeg',
+  'how-to-choose-concrete-contractor-seattle': '/images/concrete-30.jpeg',
+  'concrete-pool-deck-cost-seattle': '/images/concrete-45.jpeg',
 };

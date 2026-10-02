@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const poolDecks: ServiceContent = {
+  metaTitle: 'Concrete Pool Decks Seattle | Slip-Resistant & Cool-Deck',
+  metaDescription: 'Seattle concrete pool decks with wet-grip finishes and cool-deck coatings. Licensed, 10-year warranty, free estimates. Call (206) 495-0997.',
   benefits: [
     {
       title: "Slip-Resistant Surfaces Engineered for Safety",

@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const garageFloors: ServiceContent = {
+  metaTitle: 'Garage Floor Concrete Seattle | Epoxy Coating & Slab Replacement',
+  metaDescription: 'Seattle garage floor concrete — new slabs, epoxy coatings & repairs. Moisture barriers, slip-resistant finishes, heavy-load rated. Licensed, 10-yr warranty. Call (206) 495-0997.',
   benefits: [
     {
       title: "Industrial-Grade Load Capacity",

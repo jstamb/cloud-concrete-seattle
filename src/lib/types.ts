@@ -24,6 +24,8 @@ export interface ServiceFAQ {
 }
 
 export interface ServiceContent {
+  metaTitle?: string;
+  metaDescription?: string;
   benefits: ServiceBenefit[];
   processSteps: ServiceProcessStep[];
   caseStudy: ServiceCaseStudy;

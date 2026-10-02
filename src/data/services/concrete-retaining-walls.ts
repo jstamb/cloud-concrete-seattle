@@ -1,6 +1,8 @@
 import type { ServiceContent } from '@/lib/types';
 
 export const concreteRetainingWalls: ServiceContent = {
+  metaTitle: 'Concrete Retaining Wall Contractors Seattle | Engineered Walls',
+  metaDescription: 'Seattle concrete retaining wall installation — engineered for slopes, drainage & seismic loads. Gravity walls to 20ft+. Licensed, 10-yr warranty. Free estimate: (206) 495-0997.',
   benefits: [
     {
       title: "Engineered for Seattle's Steep and Saturated Slopes",
