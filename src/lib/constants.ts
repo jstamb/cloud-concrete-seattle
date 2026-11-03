@@ -448,7 +448,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <li><strong>PNW-grade mix design</strong> — air-entrained concrete (typically 5,000+ PSI) to handle freeze-thaw cycles</li>
     </ol>
     <h2>How much does concrete flatwork cost in Seattle?</h2>
-    <p>In 2026, Seattle-area concrete flatwork generally runs $12–$22 per square foot for standard broom-finish installation, with decorative finishes like stamped or stained concrete pricing $18–$30+ per square foot. See our detailed <a href="/blog/concrete-driveway-cost-seattle">2025 Seattle concrete pricing guide</a> for a full breakdown.</p>
+    <p>In 2026, Seattle-area concrete flatwork generally runs $12–$22 per square foot for standard broom-finish installation, with decorative finishes like stamped or stained concrete pricing $18–$30+ per square foot. See our detailed <a href="/blog/concrete-driveway-cost-seattle">2026 Seattle concrete pricing guide</a> for a full breakdown.</p>
     <h2>How long does flatwork last?</h2>
     <p>Properly installed concrete flatwork in Seattle should last 30–50 years with minimal maintenance. The biggest factors in longevity are subgrade compaction, drainage, and joint placement — not the concrete itself. Sealing every 3–5 years extends life and preserves appearance.</p>
     <h2>Get a Seattle flatwork estimate</h2>
@@ -500,6 +500,45 @@ export const BLOG_POSTS: BlogPost[] = [
     <h2>Get a free pool deck estimate</h2>
     <p>Cloud Concrete of Seattle builds slip-resistant, drainage-engineered <a href="/services/pool-decks">pool decks</a> backed by a 10-year warranty. <a href="/contact">Request a free estimate</a> or call <strong>(206) 495-0997</strong>.</p>`,
     author: "Cloud Concrete Staff"
+  },
+  {
+    title: "Concrete Sealing Cost in Seattle (2026 Guide)",
+    slug: "concrete-sealing-cost-seattle",
+    category: "Tips & Advice",
+    date: "November 03, 2026",
+    excerpt: "What concrete sealing costs in Seattle, when to reseal driveways and patios, and which sealer types survive 37+ inches of PNW rain.",
+    content: `<p><strong>Concrete sealing in Seattle</strong> typically costs <strong>$1.50–$4.50 per square foot</strong> in 2026 for professional application, depending on surface size, prep, and sealer type. A standard residential driveway often lands between $400 and $1,200. Skipping this step is the fastest way to shorten a slab's life in a climate that dumps more than 37 inches of rain a year.</p>
+    <h2>Why seal concrete in Seattle?</h2>
+    <p>Unsealed concrete is porous. Rain, de-icing salts, and freeze-thaw cycles drive water into that matrix. The water expands when it freezes and pops the surface (spalling). A penetrating or film-forming sealer blocks that path. We recommend resealing <a href="/services/concrete-driveways">driveways</a> and <a href="/services/concrete-patios">patios</a> every 2–4 years, sooner for stamped or colored work.</p>
+    <h2>Which sealer should Seattle homeowners use?</h2>
+    <ul>
+      <li><strong>Penetrating silane/siloxane</strong> — best for broom-finish driveways and sidewalks; it does not change the look and lasts longest in rain.</li>
+      <li><strong>Acrylic film sealer</strong> — used on <a href="/services/stamped-concrete">stamped</a> and <a href="/services/colored-concrete">colored</a> surfaces to lock color and add sheen. Add grit for wet traction.</li>
+      <li><strong>Epoxy or polyaspartic</strong> — interior <a href="/services/garage-floors">garage floors</a> only. Exterior film coatings peel in PNW weather.</li>
+    </ul>
+    <h2>What affects the price?</h2>
+    <p>Prep is most of the job. Oil stains, old failing sealer, and moss must come off before a new coat will bond. Steep West Seattle or Queen Anne driveways take more time and safety gear. See our <a href="/services/concrete-sealing">concrete sealing</a> service page for process details, or <a href="/contact">request a free estimate</a> at <strong>(206) 495-0997</strong>.</p>`,
+    author: "Cloud Concrete Staff"
+  },
+  {
+    title: "Garage Floor Concrete Options in Seattle (2026)",
+    slug: "garage-floor-concrete-seattle",
+    category: "Tips & Advice",
+    date: "November 03, 2026",
+    excerpt: "New garage slabs vs. epoxy coatings in Seattle — costs, moisture vapor, and the finishes that hold up to rain-soaked cars.",
+    content: `<p>A <strong>Seattle garage floor</strong> is either a new slab or a coating over an existing one. New garage <a href="/services/concrete-slabs">slabs</a> typically run <strong>$10–$18 per square foot</strong> installed in 2026. Professional epoxy or polyaspartic coatings on a sound existing slab run <strong>$6–$14 per square foot</strong>.</p>
+    <h2>Why moisture vapor matters here</h2>
+    <p>Seattle garages sit on wet glacial till and clay. If the original pour skipped a vapor barrier, moisture still moves up through the slab. Coatings fail as bubbles and peeling when that vapor has nowhere to go. We test moisture before any coating. High readings mean a moisture-mitigation primer or a new slab with a 6-mil vapor barrier — not another cheap epoxy kit from a big-box store.</p>
+    <h2>Finish options</h2>
+    <ul>
+      <li><strong>Broom-finish slab</strong> — lowest cost, durable, easy to clean with a squeegee.</li>
+      <li><strong>Polished or densified</strong> — low maintenance, no film to peel. See <a href="/services/polished-concrete">polished concrete</a>.</li>
+      <li><strong>Epoxy with flake</strong> — hides stains and adds traction for wet tires.</li>
+      <li><strong>Polyaspartic</strong> — faster cure and better UV/chemical resistance than standard epoxy.</li>
+    </ul>
+    <h2>Get a garage floor estimate</h2>
+    <p>Cloud Concrete of Seattle pours moisture-managed <a href="/services/garage-floors">garage floors</a> and coats existing slabs after a proper moisture test. <a href="/contact">Request a free on-site estimate</a> or call <strong>(206) 495-0997</strong>.</p>`,
+    author: "Cloud Concrete Staff"
   }
 ];
 
@@ -518,4 +557,6 @@ export const BLOG_IMAGES: Record<string, string> = {
   'what-is-concrete-flatwork-seattle': '/images/concrete-100.jpeg',
   'how-to-choose-concrete-contractor-seattle': '/images/concrete-30.jpeg',
   'concrete-pool-deck-cost-seattle': '/images/concrete-45.jpeg',
+  'concrete-sealing-cost-seattle': '/images/concrete-35.jpeg',
+  'garage-floor-concrete-seattle': '/images/concrete-40.jpeg',
 };
