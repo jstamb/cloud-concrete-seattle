@@ -24,7 +24,7 @@ export default function Header() {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center space-x-8 text-sm font-bold text-slate-300">
+          <nav className="hidden lg:flex items-center space-x-6 text-sm font-bold text-slate-300">
             <div className="relative group">
               <button className="hover:text-brand-secondary transition-colors uppercase tracking-wider flex items-center gap-1">
                 Services
@@ -48,23 +48,46 @@ export default function Header() {
             <a href="/locations" className="hover:text-brand-secondary transition-colors uppercase tracking-wider">Locations</a>
             <a href="/blog" className="hover:text-brand-secondary transition-colors uppercase tracking-wider">Blog</a>
             <a href="/about" className="hover:text-brand-secondary transition-colors uppercase tracking-wider">About</a>
-            <a
-              href={`tel:${PHONE_NUMBER}`}
-              className="bg-brand-primary text-white px-6 py-3 rounded-lg hover:brightness-110 transition-all shadow-lg flex items-center space-x-2 border border-white/10"
-            >
-              <svg className="w-4 h-4 text-brand-secondary" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 005.455 5.455l.773-1.548a1 1 0 011.06-.539l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
-              <span>{PHONE_NUMBER}</span>
-            </a>
           </nav>
 
-          {/* Mobile Toggle */}
-          <button className="lg:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <div className="flex items-center gap-2">
+            {/* Desktop: two solid actions. Quote URL is the existing /contact page. */}
+            <div className="hidden lg:flex items-center gap-2">
+              <a
+                href="/contact"
+                className="bg-brand-primary text-white px-5 py-3 rounded-lg hover:brightness-110 transition-all shadow-lg font-black text-sm uppercase tracking-wider"
+              >
+                Start My Quote
+              </a>
+              <a
+                href={`tel:${PHONE_NUMBER}`}
+                className="bg-brand-secondary text-brand-dark px-5 py-3 rounded-lg hover:brightness-110 transition-all shadow-lg font-black text-sm uppercase tracking-wider inline-flex items-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 005.455 5.455l.773-1.548a1 1 0 011.06-.539l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                Call Now
+              </a>
+            </div>
+
+            {/* Mobile: one tap-to-call. No second header CTA. */}
+            <a
+              href={`tel:${PHONE_NUMBER}`}
+              aria-label={`Call ${PHONE_NUMBER}`}
+              className="lg:hidden inline-flex items-center gap-1.5 bg-brand-primary text-white px-3 py-2.5 rounded-lg font-black text-xs uppercase tracking-wider shadow-lg"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 005.455 5.455l.773-1.548a1 1 0 011.06-.539l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              Call Now
+            </a>
+
+            <button className="lg:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
             </svg>
           </button>
+          </div>
         </div>
       </div>
 
@@ -82,7 +105,6 @@ export default function Header() {
           <a href="/locations" onClick={() => setMobileMenuOpen(false)} className="block font-bold text-white text-lg uppercase tracking-wider">Locations</a>
           <a href="/blog" onClick={() => setMobileMenuOpen(false)} className="block font-bold text-white text-lg uppercase tracking-wider">Blog</a>
           <a href="/about" onClick={() => setMobileMenuOpen(false)} className="block font-bold text-white text-lg uppercase tracking-wider">About</a>
-          <a href={`tel:${PHONE_NUMBER}`} className="block w-full text-center bg-brand-primary text-white py-4 rounded-lg font-black text-xl shadow-xl">{PHONE_NUMBER}</a>
         </div>
       )}
     </header>
