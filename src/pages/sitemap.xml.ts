@@ -59,7 +59,12 @@ export const GET: APIRoute = async () => {
     }
   }
 
-  const allPages = [...staticPages, ...servicePages, ...locationPages, ...blogPages, ...categoryPages, ...combinedPages];
+  const allPages = [...staticPages, ...servicePages, ...locationPages, ...blogPages, ...categoryPages, ...combinedPages]
+    .map((page) => ({
+      ...page,
+      // Match <link rel="canonical">, which uses a trailing slash.
+      url: page.url.endsWith('/') ? page.url : `${page.url}/`,
+    }));
 
   // Escape ampersands for XML
   const escapeXml = (str: string) => str.replace(/&/g, '&amp;');

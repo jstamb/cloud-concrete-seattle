@@ -448,7 +448,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <li><strong>PNW-grade mix design</strong> — air-entrained concrete (typically 5,000+ PSI) to handle freeze-thaw cycles</li>
     </ol>
     <h2>How much does concrete flatwork cost in Seattle?</h2>
-    <p>In 2026, Seattle-area concrete flatwork generally runs $12–$22 per square foot for standard broom-finish installation, with decorative finishes like stamped or stained concrete pricing $18–$30+ per square foot. See our detailed <a href="/blog/concrete-driveway-cost-seattle">2025 Seattle concrete pricing guide</a> for a full breakdown.</p>
+    <p>In 2026, Seattle-area concrete flatwork generally runs $12–$22 per square foot for standard broom-finish installation, with decorative finishes like stamped or stained concrete pricing $18–$30+ per square foot. See our detailed <a href="/blog/concrete-driveway-cost-seattle">2026 Seattle concrete pricing guide</a> for a full breakdown.</p>
     <h2>How long does flatwork last?</h2>
     <p>Properly installed concrete flatwork in Seattle should last 30–50 years with minimal maintenance. The biggest factors in longevity are subgrade compaction, drainage, and joint placement — not the concrete itself. Sealing every 3–5 years extends life and preserves appearance.</p>
     <h2>Get a Seattle flatwork estimate</h2>
@@ -500,6 +500,60 @@ export const BLOG_POSTS: BlogPost[] = [
     <h2>Get a free pool deck estimate</h2>
     <p>Cloud Concrete of Seattle builds slip-resistant, drainage-engineered <a href="/services/pool-decks">pool decks</a> backed by a 10-year warranty. <a href="/contact">Request a free estimate</a> or call <strong>(206) 495-0997</strong>.</p>`,
     author: "Cloud Concrete Staff"
+  },
+  {
+    title: "Concrete Retaining Wall Cost in Seattle (2026)",
+    slug: "concrete-retaining-wall-cost-seattle",
+    category: "Tips & Advice",
+    date: "November 15, 2026",
+    excerpt: "What a concrete retaining wall costs in Seattle, why hillside drainage changes the price, and when a wall needs a building permit.",
+    content: `<p>A <strong>concrete retaining wall in Seattle</strong> usually costs more than a flat-yard wall in a dry city. Forbes Home's national guide (audited October 2024, not a Seattle bid) puts a typical wall at <strong>$10–$100 per square foot</strong> of face, or about <strong>$1,000–$10,000</strong> for a common 4-foot by 25-foot wall. That range excludes drainage, excavation, and land clearing. Seattle hillside jobs — Queen Anne, West Seattle, Beacon Hill, Magnolia — tend to land in the upper half because of access, wet soil, and drainage. We quote the slope we see, not the national average.</p>
+    <h2>What changes the price on a Seattle hillside?</h2>
+    <ul>
+      <li><strong>Height and retained soil.</strong> A 3-foot garden wall is a different structure from a wall holding a driveway. Taller walls need more concrete, more steel, and often an engineer.</li>
+      <li><strong>Access.</strong> A truck that cannot reach the pour means wheelbarrows, a pump, or a smaller crew window. Steep lots add that cost before the first yard is placed.</li>
+      <li><strong>Drainage.</strong> Saturated glacial till and clay push hard against a wall all winter. A wall without a drain, gravel backfill, and weep path fails. That drainage work is part of a correct bid, not an extra.</li>
+      <li><strong>Finish.</strong> A plain poured wall costs less than a board-formed or stained wall. The structure should come first.</li>
+    </ul>
+    <h2>When does a Seattle retaining wall need a permit?</h2>
+    <p>A wall that holds back more than about 4 feet of soil usually needs a Seattle building permit. Confirm the current threshold with SDCI before you dig. Walls near a property line, a public walk, or a neighbor's foundation need a plan, not a guess. We pull permits for <a href="/services/concrete-retaining-walls">retaining wall</a> work that requires them.</p>
+    <h2>Why drainage decides whether the wall lasts</h2>
+    <p>Seattle rain does not just wet the face of a wall. It loads the soil behind it. Water that cannot leave becomes pressure. In a freeze, that pressure spikes. A poured wall with no outlet will lean, crack, or kick out at the toe. Our builds include a drainage course and a way for water to leave the back of the wall. That is the same reason <a href="/blog/concrete-solutions-seattle-rain">drainage comes first</a> on driveways and patios.</p>
+    <h2>Repair or replace?</h2>
+    <p>A hairline crack in a short garden wall is often a seal job. A wall that leans, has a horizontal crack, or lets soil through the joints is a structural problem. Patching the face does not fix the load behind it. If the wall holds a driveway, a deck, or a neighbor's yard, replace it with an engineered wall. See our <a href="/services/concrete-repair">repair</a> page for surface work, and the retaining wall page when the wall itself has moved.</p>
+    <h2>Get a hillside quote</h2>
+    <p>A phone quote cannot see the slope, the soil, or the access. <a href="/contact">Request a free site visit</a> or call <strong>(206) 495-0997</strong>. If the wall also needs a walk replaced at the street, read <a href="/blog/seattle-sidewalk-repair-responsibility">who pays for sidewalk repair in Seattle</a>.</p>`,
+    author: "Cloud Concrete Staff"
+  },
+  {
+    title: "Who Pays for Sidewalk Repair in Seattle? (2026)",
+    slug: "seattle-sidewalk-repair-responsibility",
+    category: "Seattle Local Guides",
+    date: "November 15, 2026",
+    excerpt: "Seattle makes the adjacent property owner keep the sidewalk safe. Here is which SDOT permit you need, and when to call the City arborist about tree roots.",
+    content: `<p><strong>In Seattle, the adjacent property owner pays for sidewalk repair</strong> in most cases. Seattle Municipal Code Chapter 15.72 requires owners to keep the sidewalk, shoulder, and alley next to their property safe for public travel. That includes snow, ice, leaves, overgrown plants, and broken concrete. SDOT does not treat a cracked front walk as a free city repair.</p>
+    <h2>When should you ask the City first?</h2>
+    <p>Do not assume the City will pay. Ask SDOT first if a city street tree or a city utility looks like the cause. Street trees planted by the City are maintained by the City. Call an SDOT arborist at <strong>(206) 684-TREE</strong> before you cut a root or start the repair.</p>
+    <h2>Which permit do you need?</h2>
+    <p>You need a Street Use permit before you replace sidewalk concrete. SDOT's applicant guide AG 1011 splits the permit by size:</p>
+    <ul>
+      <li><strong>Under 100 square feet:</strong> Right-of-Way Maintenance Permit</li>
+      <li><strong>Under 2,000 square feet:</strong> Right-of-Way Construction Permit</li>
+      <li><strong>2,000 square feet or more:</strong> Street Improvement Permit</li>
+    </ul>
+    <p>The permit is how the city checks thickness, slope, and curb ramps. A panel that looks fine to a homeowner can fail inspection if the cross-slope is too steep for a wheelchair. Our <a href="/services/concrete-sidewalks">sidewalk crew</a> pulls the Street Use permit and meets the inspector. Permit basics for other concrete work are in our <a href="/blog/seattle-concrete-permits">Seattle permit guide</a>.</p>
+    <h2>Tree roots and trip hazards</h2>
+    <p>Street trees lift panels all over Ballard, Capitol Hill, and the University District. Call an SDOT arborist at <strong>(206) 684-TREE</strong> before you cut a street-tree root. Cutting the wrong root can kill the tree and still leave you with the sidewalk bill. A proper repair may use a root barrier, a thicker panel, or a slight grade change so the walk stays usable and the tree stays healthy.</p>
+    <h2>What does a sidewalk panel cost?</h2>
+    <p>A single panel is a small pour with a large share of the cost in the permit, the saw-cut, and the tree-root work. Do not price it like a big driveway. Our <a href="/blog/what-is-concrete-flatwork-seattle">flatwork guide</a> covers the $12–$22 per square foot band for standard broom-finish concrete in 2026. A sidewalk job is often smaller than that band suggests, because mobilization and the SDOT permit do not shrink with the panel. We quote the panel, not a national average.</p>
+    <h2>What you should do next</h2>
+    <ol>
+      <li>Photograph the uplift, the crack, and the nearest street tree.</li>
+      <li>If a city tree or a city pipe looks like the cause, report it to SDOT before you hire a crew.</li>
+      <li>If the damage is yours, get a Street Use permit and a contractor who pours to SDOT standards.</li>
+    </ol>
+    <p><a href="/contact">Request a sidewalk estimate</a> or call <strong>(206) 495-0997</strong>. If the slope above the walk also needs a wall, see <a href="/blog/concrete-retaining-wall-cost-seattle">retaining wall cost in Seattle</a>.</p>`,
+    author: "Cloud Concrete Staff"
   }
 ];
 
@@ -518,4 +572,6 @@ export const BLOG_IMAGES: Record<string, string> = {
   'what-is-concrete-flatwork-seattle': '/images/concrete-100.jpeg',
   'how-to-choose-concrete-contractor-seattle': '/images/concrete-30.jpeg',
   'concrete-pool-deck-cost-seattle': '/images/concrete-45.jpeg',
+  'concrete-retaining-wall-cost-seattle': '/images/concrete-22.jpeg',
+  'seattle-sidewalk-repair-responsibility': '/images/concrete-28.jpeg',
 };
