@@ -6,7 +6,7 @@ export default defineConfig({
     react(),
   ],
   output: 'static',
-  site: 'https://cloudconcreteseattle.com',
+  site: 'https://www.cloudconcreteseattle.com',
   build: {
     assets: '_assets',
   },

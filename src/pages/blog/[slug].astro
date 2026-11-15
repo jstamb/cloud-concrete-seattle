@@ -14,6 +14,16 @@ export function getStaticPaths() {
 
 const { post } = Astro.props;
 const imageUrl = BLOG_IMAGES[post.slug] || '/images/concrete-100.jpeg';
+const articleUrl = `${DOMAIN}/blog/${post.slug}/`;
+
+function toIsoDate(input: string): string {
+  const parsed = new Date(input);
+  if (Number.isNaN(parsed.getTime())) return input;
+  const y = parsed.getFullYear();
+  const m = String(parsed.getMonth() + 1).padStart(2, '0');
+  const d = String(parsed.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
 
 const title = post.title;
 const description = post.excerpt;
@@ -28,7 +38,8 @@ const description = post.excerpt;
     title={post.title}
     excerpt={post.excerpt}
     imageUrl={`${DOMAIN}${imageUrl}`}
-    datePublished="2024-01-01"
+    datePublished={toIsoDate(post.date)}
+    url={articleUrl}
   />
 
   <div class="pb-32">

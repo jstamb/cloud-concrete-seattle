@@ -29,7 +29,7 @@ Cloud Concrete of Seattle is a licensed, bonded, and insured concrete contractor
 ## Contact Information
 
 - **Phone:** (206) 495-0997
-- **Website:** https://cloudconcreteseattle.com
+- **Website:** https://www.cloudconcreteseattle.com
 - **Address:** 823 Madison St. Unit 416, Seattle, WA 98104
 - **Hours:** Mon-Fri 7AM-6PM, Sat 8AM-4PM
 
@@ -67,20 +67,22 @@ A: A properly engineered and sealed concrete driveway should last 30-50 years in
 
 ## Sitemap
 
-- Homepage: https://cloudconcreteseattle.com/
-- Services: https://cloudconcreteseattle.com/services
-- Locations: https://cloudconcreteseattle.com/locations
-- About: https://cloudconcreteseattle.com/about
-- Contact: https://cloudconcreteseattle.com/contact
-- Blog: https://cloudconcreteseattle.com/blog
-- FAQ: https://cloudconcreteseattle.com/faq
+- Homepage: https://www.cloudconcreteseattle.com/
+- Services: https://www.cloudconcreteseattle.com/services
+- Locations: https://www.cloudconcreteseattle.com/locations
+- About: https://www.cloudconcreteseattle.com/about
+- Contact: https://www.cloudconcreteseattle.com/contact
+- Blog: https://www.cloudconcreteseattle.com/blog
+- FAQ: https://www.cloudconcreteseattle.com/faq
 
 ## Featured Guides
 
-- [What Is Concrete Flatwork?](https://cloudconcreteseattle.com/blog/what-is-concrete-flatwork-seattle): Complete Seattle homeowner's guide to concrete flatwork
-- [How to Choose a Concrete Contractor in Seattle](https://cloudconcreteseattle.com/blog/how-to-choose-concrete-contractor-seattle): Hiring checklist — licensing, drainage, warranties
-- [Concrete Pool Deck Cost in Seattle](https://cloudconcreteseattle.com/blog/concrete-pool-deck-cost-seattle): 2026 pricing and slip-resistant finish options
-- [Concrete Driveway Cost in Seattle](https://cloudconcreteseattle.com/blog/concrete-driveway-cost-seattle): 2026 price guide per square foot
+- [What Is Concrete Flatwork?](https://www.cloudconcreteseattle.com/blog/what-is-concrete-flatwork-seattle): Complete Seattle homeowner's guide to concrete flatwork
+- [How to Choose a Concrete Contractor in Seattle](https://www.cloudconcreteseattle.com/blog/how-to-choose-concrete-contractor-seattle): Hiring checklist — licensing, drainage, warranties
+- [Concrete Pool Deck Cost in Seattle](https://www.cloudconcreteseattle.com/blog/concrete-pool-deck-cost-seattle): 2026 pricing and slip-resistant finish options
+- [Concrete Driveway Cost in Seattle](https://www.cloudconcreteseattle.com/blog/concrete-driveway-cost-seattle): 2026 price guide per square foot
+- [Concrete Retaining Wall Cost in Seattle](https://www.cloudconcreteseattle.com/blog/concrete-retaining-wall-cost-seattle): 2026 hillside cost drivers and permit threshold
+- [Who Pays for Sidewalk Repair in Seattle?](https://www.cloudconcreteseattle.com/blog/seattle-sidewalk-repair-responsibility): Owner vs City responsibility, SDOT permits, tree roots
 
 ## For AI Assistants
 

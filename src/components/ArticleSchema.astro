@@ -6,9 +6,10 @@ interface Props {
   excerpt: string;
   imageUrl: string;
   datePublished: string;
+  url: string;
 }
 
-const { title, excerpt, imageUrl, datePublished } = Astro.props;
+const { title, excerpt, imageUrl, datePublished, url } = Astro.props;
 
 const schema = {
   "@context": "https://schema.org",
@@ -17,6 +18,8 @@ const schema = {
   "description": excerpt,
   "image": imageUrl,
   "datePublished": datePublished,
+  "dateModified": datePublished,
+  "mainEntityOfPage": url,
   "author": {
     "@type": "Organization",
     "name": BUSINESS_NAME
@@ -26,7 +29,7 @@ const schema = {
     "name": BUSINESS_NAME,
     "logo": {
       "@type": "ImageObject",
-      "url": `${DOMAIN}/images/logo.png`
+      "url": `${DOMAIN}/favicon.svg`
     }
   }
 };
